@@ -10,6 +10,7 @@
     "build:server": "NODE_ENV=production webpack --env.platform=server",
     "run:dev": "NODE_ENV=development nodemon build/js/server.js",
     "run:prod": "NODE_ENV=production node build/js/server.js",
+    "deploy": "yarn clean && yarn build && yarn build:server && yarn run:prod",
     "test:lint:js": "eslint src/ --ext=js --ext=jsx --ext=ts --ext=tsx --fix",
     "test:lint:styled": "stylelint --config=.stylelintrc '**/*.styled.*'",
     "test": "run-s test:**",

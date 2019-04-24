@@ -28,7 +28,7 @@ server.get('*', (req, res) => {
 
   const dataRequirements = routes
     .filter(route => matchPath(req.url, route) && route.serverFetch)
-    .map(route => route.serverFetch);
+    .map(route => route.serverFetch(store));
 
   Promise.all(dataRequirements).then(() => {
     const body = renderToString(
