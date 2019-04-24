@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-object-literal-type-assertion, @typescript-eslint/no-explicit-any */
 import * as styledComponents from 'styled-components';
-import { ThemedStyledComponentsModule } from 'styled-components';
+import { ServerStyleSheet, ThemedStyledComponentsModule } from 'styled-components';
 import { ThemeInterface } from './theme';
 
 const {
@@ -32,5 +32,5 @@ const media = (Object.keys(sizes) as (keyof typeof sizes)[]).reduce(
   {} as { [key in keyof typeof sizes]: styledComponents.ThemedCssFunction<ThemeInterface> }
 );
 
-export { css, createGlobalStyle, keyframes, ThemeProvider, media, sizes };
+export { css, createGlobalStyle, keyframes, ServerStyleSheet, ThemeProvider, media, sizes };
 export default styled;
