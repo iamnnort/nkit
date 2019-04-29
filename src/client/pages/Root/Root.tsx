@@ -1,27 +1,60 @@
 import * as React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { renderRoutes } from 'react-router-config';
 import { Helmet } from 'react-helmet';
 
 import { GlobalStyle } from './Root.styled';
 
 import routes from '../../routes';
 
-const Root = () => {
+const RootComponent = () => {
   return (
     <React.Fragment>
       <GlobalStyle />
-      <Helmet defaultTitle="Unknown Build" titleTemplate="Unknown build - %s">
-        <html lang="en" />
-        <meta charSet="utf-8" />
-        <meta name="description" content="Unknown Build application" />
-      </Helmet>
-      <Switch>
-        {routes.map(route => (
-          <Route {...route} />
-        ))}
-      </Switch>
+      <Helmet
+        defaultTitle="react-redux-ssr-ts"
+        titleTemplate="react-redux-ssr-ts - %s"
+        meta={[
+          {
+            name: 'description',
+            content: `react-redux-ssr-ts`,
+          },
+          {
+            property: 'og:title',
+            content: 'AnyComp',
+          },
+          {
+            property: 'og:description',
+            content: `react-redux-ssr-ts`,
+          },
+          {
+            property: 'og:url',
+            content: `https://react-redux-ssr-ts.com`,
+          },
+          // {
+          //   property: 'og:image',
+          //   content: `https://react-redux-ssr-ts.com`,
+          // },
+          {
+            name: 'twitter:title',
+            content: 'AnyComp',
+          },
+          {
+            name: 'twitter:description',
+            content: `react-redux-ssr-ts`,
+          },
+          {
+            name: 'twitter:url',
+            content: `https://react-redux-ssr-ts.com`,
+          },
+          // {
+          //   name: 'twitter:image',
+          //   content: `https://react-redux-ssr-ts.com`,
+          // },
+        ]}
+      />
+      {renderRoutes(routes)}
     </React.Fragment>
   );
 };
 
-export default Root;
+export default RootComponent;

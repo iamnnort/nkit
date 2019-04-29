@@ -4,6 +4,12 @@ import { createGlobalStyle } from '../../theme/styled-components';
 export const GlobalStyle = createGlobalStyle`
   ${styledNormalize};
 
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
   body {
     line-height: 1.6;
 

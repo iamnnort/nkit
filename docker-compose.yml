@@ -2,7 +2,7 @@ version: '2.2'
 
 services:
   server:
-    container_name: unknown-build
+    container_name: nikitapavets-ssr
     build:
       context: .
       dockerfile: ./Dockerfile

@@ -1,11 +1,9 @@
 import { RouteProps } from 'react-router-dom';
-import { Store } from 'redux';
-import { State, Action } from './store';
 import Home from './pages/Home/Home.container';
 import NotFound from './pages/NotFound/NotFound';
 
 type RouteInterface = RouteProps & {
-  serverFetch?: (store: Store<State, Action>) => Action[];
+  serverFetch?: any;
 };
 
 const routes: RouteInterface[] = [
@@ -16,7 +14,7 @@ const routes: RouteInterface[] = [
   },
   {
     path: '*',
-    component: NotFound,
+    ...NotFound,
   },
 ].map(route => ({ ...route }));
 

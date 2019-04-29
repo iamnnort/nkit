@@ -1,17 +1,14 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
-import { NotFound } from './NotFound.styled';
-
-const NotFoundComponent = () => {
+const NotFoundComponent: React.SFC = () => {
   return (
     <React.Fragment>
-      <Helmet>
-        <title>NotFound</title>
-      </Helmet>
-      <NotFound>NotFound</NotFound>
+      <Helmet title={'Страница не найдена'} />
     </React.Fragment>
   );
 };
 
-export default NotFoundComponent;
+export default {
+  component: NotFoundComponent,
+};
