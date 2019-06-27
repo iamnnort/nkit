@@ -2,7 +2,7 @@ version: '2.2'
 
 services:
   server:
-    container_name: nikitapavets-ssr
+    container_name: react-ssr-ts-redux
     build:
       context: .
       dockerfile: ./Dockerfile

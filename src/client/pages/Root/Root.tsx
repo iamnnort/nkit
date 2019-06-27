@@ -11,12 +11,12 @@ const RootComponent = () => {
     <React.Fragment>
       <GlobalStyle />
       <Helmet
-        defaultTitle="react-redux-ssr-ts"
-        titleTemplate="react-redux-ssr-ts - %s"
+        defaultTitle="react-ssr-ts-redux"
+        titleTemplate="react-ssr-ts-redux - %s"
         meta={[
           {
             name: 'description',
-            content: `react-redux-ssr-ts`,
+            content: `react-ssr-ts-redux`,
           },
           {
             property: 'og:title',
@@ -24,15 +24,15 @@ const RootComponent = () => {
           },
           {
             property: 'og:description',
-            content: `react-redux-ssr-ts`,
+            content: `react-ssr-ts-redux`,
           },
           {
             property: 'og:url',
-            content: `https://react-redux-ssr-ts.com`,
+            content: `https://react-ssr-ts-redux.com`,
           },
           // {
           //   property: 'og:image',
-          //   content: `https://react-redux-ssr-ts.com`,
+          //   content: `https://react-ssr-ts-redux.com`,
           // },
           {
             name: 'twitter:title',
@@ -40,15 +40,15 @@ const RootComponent = () => {
           },
           {
             name: 'twitter:description',
-            content: `react-redux-ssr-ts`,
+            content: `react-ssr-ts-redux`,
           },
           {
             name: 'twitter:url',
-            content: `https://react-redux-ssr-ts.com`,
+            content: `https://react-ssr-ts-redux.com`,
           },
           // {
           //   name: 'twitter:image',
-          //   content: `https://react-redux-ssr-ts.com`,
+          //   content: `https://react-ssr-ts-redux.com`,
           // },
         ]}
       />

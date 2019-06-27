@@ -1,16 +1,18 @@
 import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
 import HomeComponent from './Home';
-import { State, Action } from '../../store';
-import { toggleSidebar } from '../../store/ui/actions';
-import { isSidebarOpened } from '../../store/ui/selectors';
+import { StateProps, DispatchProps } from './Home.types';
+import { State } from '../../store';
+import { loadReleases } from '../../store/git/actions';
+import { isReleasesLoaded, getReleases } from '../../store/git/selectors';
 
-const mapStateToProps = (state: State) => ({
-  isSidebarOpened: isSidebarOpened(state),
+const mapStateToProps = (state: State): StateProps => ({
+  isReleasesLoaded: isReleasesLoaded(state),
+  releases: getReleases(state),
 });
 
-const mapDispatchToProps = (dispatch: Dispatch<Action>) => ({
-  toggleSidebar: bindActionCreators(toggleSidebar, dispatch),
+const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
+  loadReleases: bindActionCreators(loadReleases, dispatch),
 });
 
 const Home = connect(
@@ -18,7 +20,7 @@ const Home = connect(
   mapDispatchToProps
 )(HomeComponent);
 
-const serverFetch = () => (dispatch: Dispatch<Action>) => [bindActionCreators(toggleSidebar, dispatch)()];
+const serverFetch = () => (dispatch: Dispatch) => [bindActionCreators(loadReleases, dispatch)()];
 
 export default {
   component: Home,

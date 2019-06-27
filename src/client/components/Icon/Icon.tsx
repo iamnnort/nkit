@@ -1,13 +1,15 @@
 import * as React from 'react';
 
-import UnknownSvg from './_svg/unknown.svg';
+import CheckMark from './_svg/check-mark.svg';
+import Tag from './_svg/tag.svg';
 
 interface IconsInterface {
   [key: string]: { [key: string]: JSX.Element };
 }
 
 const icons: IconsInterface = {
-  unknown: { default: <UnknownSvg /> },
+  checkMark: { default: <CheckMark /> },
+  tag: { default: <Tag /> },
 };
 
 interface Props {

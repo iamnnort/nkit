@@ -1,15 +1,13 @@
 import { combineReducers, Reducer } from 'redux';
 
-import { reducer as uiReducer, State as uiState, Action as uiAction } from './ui/reducer';
+import { reducer as gitReducer, State as gitState } from './git/reducer';
 
 export interface State {
-  ui: uiState;
+  git: gitState;
 }
 
-export type Action = uiAction;
-
 const reducer: Reducer<State> = combineReducers<State>({
-  ui: uiReducer,
+  git: gitReducer,
 });
 
 export default reducer;

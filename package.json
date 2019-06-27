@@ -1,6 +1,6 @@
 {
-  "name": "@nikitapavets/react-redux-ssr-ts",
-  "version": "1.0.0",
+  "name": "@nikitapavets/react-ssr-ts-redux",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -23,15 +23,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nikitapavets/react-redux-ssr-ts.git"
+    "url": "git+https://github.com/nikitapavets/react-ssr-ts-redux.git"
   },
   "keywords": [],
   "author": "Nikita Pavets (nikitapavets@gmail.com)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nikitapavets/react-redux-ssr-ts/issues"
+    "url": "https://github.com/nikitapavets/react-ssr-ts-redux/issues"
   },
-  "homepage": "https://github.com/nikitapavets/react-redux-ssr-ts#readme",
+  "homepage": "https://github.com/nikitapavets/react-ssr-ts-redux#readme",
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
@@ -76,6 +76,7 @@
     "webpack-shell-plugin": "^0.5.0"
   },
   "dependencies": {
+    "@types/axios": "^0.14.0",
     "@types/express": "^4.16.1",
     "@types/react": "^16.8.14",
     "@types/react-dom": "^16.8.4",
@@ -87,6 +88,7 @@
     "@types/redux-devtools-extension": "^2.13.2",
     "@types/redux-thunk": "^2.1.0",
     "@types/styled-components": "^4.1.14",
+    "axios": "^0.19.0",
     "express": "^4.16.4",
     "idempotent-babel-polyfill": "^7.0.0",
     "image-webpack-loader": "^4.6.0",

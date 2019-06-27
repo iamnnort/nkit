@@ -2,6 +2,8 @@ import styledNormalize from 'styled-normalize';
 import { createGlobalStyle } from '../../theme/styled-components';
 
 export const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic-ext');
+
   ${styledNormalize};
 
   html,

@@ -64,4 +64,4 @@ server.get('*', (req: express.Request, res: express.Response) => {
   });
 });
 
-server.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
+server.listen(PORT, () => console.log(`App listening on http://127.0.0.1:${PORT} [OK]`));

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /checkout
-Sitemap: https://react-redux-ssr-ts.com/sitemap.xml
+Sitemap: https://react-ssr-ts-redux.com/sitemap.xml

@@ -8,6 +8,7 @@ const javascript = require('./webpack/javascript');
 const css = require('./webpack/css');
 const style = require('./webpack/style');
 const image = require('./webpack/image');
+const fonts = require('./webpack/fonts');
 const package = require('./package.json');
 
 const { NODE_ENV = 'production' } = process.env;
@@ -29,7 +30,7 @@ const config = function(env) {
       extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
     },
     module: {
-      rules: [typescript, javascript, image],
+      rules: [typescript, javascript, image, fonts],
     },
     plugins: [],
   };
