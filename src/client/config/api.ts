@@ -1,9 +1,6 @@
 import env from '../lib/helpers/env';
 
-export default {
-  url: env.isProduction() ? 'http://nikitapavets.by' : 'http://localhost:9010',
-  gitUrl: 'https://api.github.com/repos/nikitapavets/react-ssr-ts-redux/',
-
+const config = {
   methods: {
     get: 'GET',
     post: 'POST',
@@ -11,9 +8,15 @@ export default {
     delete: 'DELETE',
   },
 
-  endPoints: {},
+  url: env.isProduction() ? 'https://path/to/prod/api' : 'http://path/to/dev/api',
+  endPoints: {
+    // API endpoints here
+  },
 
+  gitUrl: 'https://api.github.com/repos/nikitapavets/react-ssr-ts-redux',
   gitEndPoints: {
     getReleases: () => '/releases',
   },
 };
+
+export default config;

@@ -28,8 +28,8 @@ server.get('*', (req: express.Request, res: express.Response) => {
   const middleware = applyMiddleware(thunk);
   const store = createStore(reducer, initialState, middleware);
   const serverFetch = routes
-    .filter(route => matchPath(req.url, route) && route.serverFetch)
-    .map(route =>
+    .filter((route) => matchPath(req.url, route) && route.serverFetch)
+    .map((route) =>
       Promise.all(
         bindActionCreators(route.serverFetch, store.dispatch)({
           match: matchPath(req.url, route),

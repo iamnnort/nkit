@@ -1,11 +1,12 @@
-import { gitRequest } from '../lib/request';
+import { gitRequest } from '../lib/request/request';
 import config from '../config';
 
-export const getReleases = () =>
-  gitRequest({
+function getReleases() {
+  return gitRequest({
     method: config.api.methods.get,
     url: `${config.api.gitEndPoints.getReleases()}`,
   });
+}
 
 const git = {
   getReleases,

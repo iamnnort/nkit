@@ -3,12 +3,12 @@ import styled from '../../../theme/styled-components';
 export const Releases = styled.section``;
 
 export const ReleasesTitle = styled.div`
-  font-size: ${props => props.theme.mediumFontSize};
+  font-size: ${(props) => props.theme.mediumFontSize};
   font-weight: bold;
 `;
 
 export const ReleasesList = styled.div`
-  margin-top: ${props => props.theme.smallPadding};
+  margin-top: ${(props) => props.theme.smallPadding};
   padding-left: 5px;
 `;
 

@@ -4,10 +4,11 @@ import HomeComponent from './Home';
 import { StateProps, DispatchProps } from './Home.types';
 import { State } from '../../store';
 import { loadReleases } from '../../store/git/actions';
-import { isReleasesLoaded, getReleases } from '../../store/git/selectors';
+import { isReleasesLoaded, isReleasesLoading, getReleases } from '../../store/git/selectors';
 
 const mapStateToProps = (state: State): StateProps => ({
   isReleasesLoaded: isReleasesLoaded(state),
+  isReleasesLoading: isReleasesLoading(state),
   releases: getReleases(state),
 });
 

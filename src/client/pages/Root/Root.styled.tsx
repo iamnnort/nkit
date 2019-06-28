@@ -1,9 +1,9 @@
 import styledNormalize from 'styled-normalize';
+import fonts from '../../theme/fonts';
 import { createGlobalStyle } from '../../theme/styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic-ext');
-
+  ${fonts};
   ${styledNormalize};
 
   html,
@@ -15,10 +15,10 @@ export const GlobalStyle = createGlobalStyle`
   body {
     line-height: 1.6;
 
-    color: ${props => props.theme.textColor};
+    color: ${(props) => props.theme.textColor};
 
-    font-size: ${props => props.theme.textFontSize};
-    font-family: ${props => props.theme.textFontFamily};
+    font-size: ${(props) => props.theme.textFontSize};
+    font-family: ${(props) => props.theme.textFontFamily};
   }
 
   input,
@@ -28,7 +28,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   svg {
-    fill: ${props => props.theme.textColor};
+    fill: ${(props) => props.theme.textColor};
 
     display: inherit;
 
@@ -43,6 +43,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: ${props => props.theme.textColor};
+    color: ${(props) => props.theme.textColor};
   }
 `;

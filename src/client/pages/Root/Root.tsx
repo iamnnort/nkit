@@ -11,8 +11,8 @@ const RootComponent = () => {
     <React.Fragment>
       <GlobalStyle />
       <Helmet
-        defaultTitle="react-ssr-ts-redux"
-        titleTemplate="react-ssr-ts-redux - %s"
+        defaultTitle='react-ssr-ts-redux'
+        titleTemplate='react-ssr-ts-redux - %s'
         meta={[
           {
             name: 'description',

@@ -9,7 +9,7 @@ const ReleasesComponent: React.FC<ComponentProps> = ({ releases }) => {
     <Releases>
       <ReleasesTitle>{'Releases'}</ReleasesTitle>
       <ReleasesList>
-        {releases.map(release => (
+        {releases.map((release) => (
           <ReleasesListItem key={release.id}>
             <Icon type={'tag'} />
             <ReleasesListItemLink href={release.html_url} target={'_blank'}>

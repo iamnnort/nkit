@@ -12,8 +12,9 @@ import { ComponentProps } from './Home.types';
 import config from './Home.config';
 import Releases from './Releases/Releases';
 import Features from './Features/Features';
+import { Loader } from '../../components';
 
-const HomeComponent: React.FC<ComponentProps> = ({ isReleasesLoaded, releases, loadReleases }) => {
+const HomeComponent: React.FC<ComponentProps> = ({ isReleasesLoaded, isReleasesLoading, releases, loadReleases }) => {
   React.useEffect(() => {
     if (!isReleasesLoaded) {
       loadReleases();
@@ -28,9 +29,14 @@ const HomeComponent: React.FC<ComponentProps> = ({ isReleasesLoaded, releases, l
           <WhitePapperFeatures>
             <Features features={config.features} />
           </WhitePapperFeatures>
-          <WhitePapperReleases>
-            <Releases releases={releases} />
-          </WhitePapperReleases>
+          <Loader
+            isLoading={isReleasesLoading}
+            render={() => (
+              <WhitePapperReleases>
+                <Releases releases={releases} />
+              </WhitePapperReleases>
+            )}
+          />
         </WhitePapperInner>
       </WhitePapper>
     </Home>

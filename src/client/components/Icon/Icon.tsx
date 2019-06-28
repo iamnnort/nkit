@@ -1,22 +1,15 @@
 import * as React from 'react';
 
+import { Icons, ComponentProps } from './Icon.types';
+
 import CheckMark from './_svg/check-mark.svg';
 import Tag from './_svg/tag.svg';
 
-interface IconsInterface {
-  [key: string]: { [key: string]: JSX.Element };
-}
-
-const icons: IconsInterface = {
+const icons: Icons = {
   checkMark: { default: <CheckMark /> },
   tag: { default: <Tag /> },
 };
 
-interface Props {
-  type: string;
-  variant?: string;
-}
-
-const IconComponent: React.SFC<Props> = ({ type, variant = 'default' }) => icons[type][variant];
+const IconComponent: React.FC<ComponentProps> = ({ type, variant = 'default' }) => icons[type][variant];
 
 export default IconComponent;

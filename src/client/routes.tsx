@@ -16,6 +16,6 @@ const routes: RouteInterface[] = [
     path: '*',
     ...NotFound,
   },
-].map(route => ({ ...route }));
+].map((route) => ({ ...route }));
 
 export default routes;
