@@ -1,4 +1,5 @@
 import { RouteProps } from 'react-router-dom';
+
 import Home from './pages/Home/Home.container';
 import NotFound from './pages/NotFound/NotFound';
 
@@ -16,6 +17,6 @@ const routes: RouteInterface[] = [
     path: '*',
     ...NotFound,
   },
-].map((route) => ({ ...route }));
+];
 
 export default routes;

@@ -3,6 +3,7 @@ import { renderRoutes } from 'react-router-config';
 import { Helmet } from 'react-helmet';
 
 import { GlobalStyle } from './Root.styled';
+import lang from './Root.lang';
 
 import routes from '../../routes';
 
@@ -11,44 +12,44 @@ const RootComponent = () => {
     <React.Fragment>
       <GlobalStyle />
       <Helmet
-        defaultTitle='react-ssr-ts-redux'
-        titleTemplate='react-ssr-ts-redux - %s'
+        defaultTitle={lang.title}
+        titleTemplate={lang.titleTemplate}
         meta={[
           {
             name: 'description',
-            content: `react-ssr-ts-redux`,
+            content: lang.description,
           },
           {
             property: 'og:title',
-            content: 'AnyComp',
+            content: lang.description,
           },
           {
             property: 'og:description',
-            content: `react-ssr-ts-redux`,
+            content: lang.description,
           },
           {
             property: 'og:url',
-            content: `https://react-ssr-ts-redux.com`,
+            content: `https://github.com/nikitapavets/react-ssr-ts-redux`,
           },
           // {
           //   property: 'og:image',
-          //   content: `https://react-ssr-ts-redux.com`,
+          //   content: `https://github.com/nikitapavets/react-ssr-ts-redux`,
           // },
           {
             name: 'twitter:title',
-            content: 'AnyComp',
+            content: lang.description,
           },
           {
             name: 'twitter:description',
-            content: `react-ssr-ts-redux`,
+            content: lang.description,
           },
           {
             name: 'twitter:url',
-            content: `https://react-ssr-ts-redux.com`,
+            content: `https://github.com/nikitapavets/react-ssr-ts-redux`,
           },
           // {
           //   name: 'twitter:image',
-          //   content: `https://react-ssr-ts-redux.com`,
+          //   content: `https://github.com/nikitapavets/react-ssr-ts-redux`,
           // },
         ]}
       />

@@ -1,14 +1,14 @@
-import env from '../lib/helpers/env';
+import { Method } from 'axios';
 
 const config = {
   methods: {
-    get: 'GET',
-    post: 'POST',
-    put: 'PUT',
-    delete: 'DELETE',
+    get: 'GET' as Method,
+    post: 'POST' as Method,
+    put: 'PUT' as Method,
+    delete: 'DELETE' as Method,
   },
 
-  url: env.isProduction() ? 'https://path/to/prod/api' : 'http://path/to/dev/api',
+  url: process.env.API_URL,
   endPoints: {
     // API endpoints here
   },

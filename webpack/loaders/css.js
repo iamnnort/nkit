@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
   test: /\.css$/,
   use: ['css-loader'],
-};
+});

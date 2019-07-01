@@ -16,13 +16,13 @@ import { Provider as StoreProvider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
 import Root from './pages/Root/Root.container';
-import reducer from './store';
+import reducer, { State } from './store';
 
 import env from './lib/helpers/env';
 
 declare global {
   interface Window {
-    __PRELOADED_STATE__: any;
+    __PRELOADED_STATE__: State;
   }
 }
 

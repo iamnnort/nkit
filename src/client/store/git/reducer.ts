@@ -2,13 +2,14 @@ import { Reducer } from 'redux';
 import { ActionType } from 'typesafe-actions';
 import * as actionsCreators from './actionsCreators';
 import { ActionTypes, Git } from './types';
+import { commonInitialState } from '../../lib/store/reducer';
+import { CommonError } from '../../lib/store/types';
 
 export type State = Git;
 export type Action = ActionType<typeof actionsCreators>;
 
 const initialState: State = {
-  isLoaded: false,
-  isLoading: false,
+  ...commonInitialState,
   releases: [],
 };
 
@@ -24,7 +25,7 @@ export const reducer: Reducer<State, Action> = (state = initialState, action) =>
       return {
         ...state,
         isLoading: false,
-        isLoaded: true,
+        isInitialLoaded: true,
         releases: action.payload,
       };
 
@@ -32,6 +33,7 @@ export const reducer: Reducer<State, Action> = (state = initialState, action) =>
       return {
         ...state,
         isLoading: false,
+        error: CommonError.FAILED_REQUEST,
       };
 
     default:

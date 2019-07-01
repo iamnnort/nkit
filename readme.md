@@ -12,6 +12,7 @@
 ```bash
 git clone https://github.com/nikitapavets/react-ssr-ts-redux
 cd react-ssr-ts-redux
+cp .env.example .env
 yarn install
 yarn build && yarn build:server
 ```

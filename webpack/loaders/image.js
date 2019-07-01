@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
   test: /\.(jpe?g|png|gif|ico)$/i,
   use: [
     {
@@ -15,4 +15,4 @@ module.exports = {
       },
     },
   ],
-};
+});

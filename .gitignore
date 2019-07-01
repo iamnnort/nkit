@@ -4,4 +4,6 @@
 /.vscode
 /.idea
 
+/.env
+
 *-error.log

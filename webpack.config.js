@@ -3,12 +3,13 @@ const nodeExternals = require('webpack-node-externals');
 const WebpackShellPlugin = require('webpack-shell-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const typescript = require('./webpack/typescript');
-const javascript = require('./webpack/javascript');
-const css = require('./webpack/css');
-const style = require('./webpack/style');
-const image = require('./webpack/image');
-const fonts = require('./webpack/fonts');
+const typescript = require('./webpack/loaders/typescript');
+const javascript = require('./webpack/loaders/javascript');
+const css = require('./webpack/loaders/css');
+const style = require('./webpack/loaders/style');
+const image = require('./webpack/loaders/image');
+const fonts = require('./webpack/loaders/fonts');
+const env = require('./webpack/plugins/env');
 const package = require('./package.json');
 
 const { NODE_ENV = 'production' } = process.env;
@@ -16,7 +17,7 @@ const { NODE_ENV = 'production' } = process.env;
 const isDevelopment = NODE_ENV === 'development';
 const isProduction = NODE_ENV === 'production';
 
-const config = function(env) {
+const config = function(environment) {
   let base = {
     mode: NODE_ENV,
     output: {
@@ -30,9 +31,9 @@ const config = function(env) {
       extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
     },
     module: {
-      rules: [typescript, javascript, image, fonts],
+      rules: [typescript(), javascript(), image(), fonts()],
     },
-    plugins: [],
+    plugins: [env()],
   };
 
   if (isProduction) {
@@ -44,7 +45,7 @@ const config = function(env) {
     };
   }
 
-  if (env.platform === 'client') {
+  if (environment.platform === 'client') {
     base = {
       ...base,
       entry: {
@@ -52,12 +53,12 @@ const config = function(env) {
       },
       module: {
         ...base.module,
-        rules: [...base.module.rules, style],
+        rules: [...base.module.rules, style()],
       },
     };
   }
 
-  if (env.platform === 'server') {
+  if (environment.platform === 'server') {
     base = {
       ...base,
       entry: {
@@ -73,7 +74,7 @@ const config = function(env) {
       ],
       module: {
         ...base.module,
-        rules: [...base.module.rules, css],
+        rules: [...base.module.rules, css()],
       },
     };
   }

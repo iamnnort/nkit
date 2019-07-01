@@ -2,12 +2,13 @@ import * as React from 'react';
 
 import { Releases, ReleasesTitle, ReleasesList, ReleasesListItem, ReleasesListItemLink } from './Releases.styled';
 import { ComponentProps } from './Releases.types';
+import lang from './Releases.lang';
 import { Icon } from '../../../components';
 
 const ReleasesComponent: React.FC<ComponentProps> = ({ releases }) => {
   return (
     <Releases>
-      <ReleasesTitle>{'Releases'}</ReleasesTitle>
+      <ReleasesTitle>{lang.title}</ReleasesTitle>
       <ReleasesList>
         {releases.map((release) => (
           <ReleasesListItem key={release.id}>

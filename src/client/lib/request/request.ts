@@ -27,7 +27,7 @@ export function request(options: AxiosRequestConfig, requestType: RequestType = 
     .catch(onError);
 }
 
-export function gitRequest(options: any) {
+export function gitRequest(options: AxiosRequestConfig) {
   return request(options, RequestType.REQUEST_TYPE_GIT);
 }
 

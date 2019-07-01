@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
   test: /\.(m?jsx?|svg)$/,
   exclude: /node_modules/,
   use: [
@@ -15,4 +15,4 @@ module.exports = {
       },
     },
   ],
-};
+});

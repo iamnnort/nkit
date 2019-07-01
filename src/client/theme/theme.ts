@@ -5,6 +5,8 @@ export interface ThemeInterface {
 
   whiteColor: string;
 
+  errorColor: string;
+
   smallPadding: string;
   mediumPadding: string;
 
@@ -19,6 +21,8 @@ export const theme: ThemeInterface = {
   textFontFamily: '"Roboto", sans-serif',
 
   whiteColor: '#fff',
+
+  errorColor: '#f00',
 
   smallPadding: '15px',
   mediumPadding: '30px',
