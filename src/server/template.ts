@@ -1,6 +1,6 @@
 import { HelmetData } from 'react-helmet';
 import { appendUniversalPortals } from 'react-portal-universal/lib/server';
-import { State } from '../client/store';
+import { State } from '../common/store';
 
 const template = ({
   body,

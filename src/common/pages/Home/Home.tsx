@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import {
   Home,
@@ -10,7 +11,6 @@ import {
 } from './Home.styled';
 import { ComponentProps } from './Home.types';
 import config from './Home.config';
-import lang from './Home.lang';
 import Releases from './Releases/Releases';
 import Features from './Features/Features';
 import { Loader } from '../../components';
@@ -22,6 +22,8 @@ const HomeComponent: React.FC<ComponentProps> = ({
   releases,
   loadReleases,
 }) => {
+  const { t } = useTranslation();
+
   React.useEffect(() => {
     if (!isReleasesLoaded) {
       loadReleases();
@@ -32,7 +34,7 @@ const HomeComponent: React.FC<ComponentProps> = ({
     <Home>
       <WhitePapper>
         <WhitePapperInner>
-          <WhitePapperTitle>{lang.title}</WhitePapperTitle>
+          <WhitePapperTitle>{t('general:appTitle')}</WhitePapperTitle>
           <WhitePapperFeatures>
             <Features features={config.features} />
           </WhitePapperFeatures>

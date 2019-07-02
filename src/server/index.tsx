@@ -6,22 +6,28 @@ import { StaticRouter, matchPath } from 'react-router-dom';
 import { createStore, applyMiddleware, bindActionCreators } from 'redux';
 import { Provider as StoreProvider } from 'react-redux';
 import thunk from 'redux-thunk';
+import { I18nextProvider } from 'react-i18next';
 
+import staticFiles from './middlewares/staticFiles';
+import i18n from './middlewares/i18n';
+
+import { Request } from './types';
 import template from './template';
 
-import Root from '../client/pages/Root/Root.container';
-import { ServerStyleSheet, ThemeProvider } from '../client/theme/styled-components';
-import { theme } from '../client/theme/theme';
-import reducer from '../client/store';
-import routes from '../client/routes';
+import Root from '../common/pages/Root/Root.container';
+import { ServerStyleSheet, ThemeProvider } from '../common/theme/styled-components';
+import { theme } from '../common/theme/theme';
+import reducer from '../common/store';
+import routes from '../common/routes';
 
 const PORT = process.env.PORT || 3000;
 
 const server = express();
 
-server.use(express.static('build'));
+server.use(staticFiles);
+server.use(i18n);
 
-server.get('*', (req: express.Request, res: express.Response) => {
+server.get('*', (req: Request, res: express.Response) => {
   const sheet = new ServerStyleSheet();
   const context = {};
   const initialState = {};
@@ -40,13 +46,15 @@ server.get('*', (req: express.Request, res: express.Response) => {
   Promise.all(serverFetch).then(() => {
     const body = renderToString(
       sheet.collectStyles(
-        <StoreProvider store={store}>
-          <StaticRouter location={req.url} context={context}>
-            <ThemeProvider theme={theme}>
-              <Root />
-            </ThemeProvider>
-          </StaticRouter>
-        </StoreProvider>
+        <I18nextProvider i18n={req.i18n}>
+          <StoreProvider store={store}>
+            <StaticRouter location={req.url} context={context}>
+              <ThemeProvider theme={theme}>
+                <Root />
+              </ThemeProvider>
+            </StaticRouter>
+          </StoreProvider>
+        </I18nextProvider>
       )
     );
     const styles = sheet.getStyleTags();

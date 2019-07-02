@@ -5,8 +5,8 @@ import * as ReactDOM from 'react-dom';
 import * as initReactFastclick from 'react-fastclick';
 import { removeUniversalPortals } from 'react-portal-universal';
 
-import { ThemeProvider } from './theme/styled-components';
-import { theme } from './theme/theme';
+import { ThemeProvider } from '../common/theme/styled-components';
+import { theme } from '../common/theme/theme';
 
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
@@ -15,10 +15,11 @@ import { Provider as StoreProvider } from 'react-redux';
 
 import { BrowserRouter } from 'react-router-dom';
 
-import Root from './pages/Root/Root.container';
-import reducer, { State } from './store';
+import Root from '../common/pages/Root/Root.container';
+import reducer, { State } from '../common/store';
 
-import env from './lib/helpers/env';
+import env from '../common/lib/helpers/env';
+import '../common/i18n';
 
 declare global {
   interface Window {

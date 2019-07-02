@@ -1,12 +1,13 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
-
-import lang from './NotFound.lang';
+import { useTranslation } from 'react-i18next';
 
 const NotFoundComponent: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <React.Fragment>
-      <Helmet title={lang.title} />
+      <Helmet title={t('general:notFound')} />
     </React.Fragment>
   );
 };

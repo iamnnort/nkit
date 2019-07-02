@@ -19,6 +19,8 @@ export const GlobalStyle = createGlobalStyle`
 
     font-size: ${(props) => props.theme.textFontSize};
     font-family: ${(props) => props.theme.textFontFamily};
+    background-image: url("${require('../../../assets/images/ocean.jpeg')}");
+    background-size: cover;
   }
 
   input,

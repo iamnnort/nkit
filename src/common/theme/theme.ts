@@ -3,7 +3,9 @@ export interface ThemeInterface {
   textFontSize: string;
   textFontFamily: string;
 
+  brandColor: string;
   whiteColor: string;
+  shadowColor: string;
 
   errorColor: string;
 
@@ -20,7 +22,9 @@ export const theme: ThemeInterface = {
   textFontSize: '14px',
   textFontFamily: '"Roboto", sans-serif',
 
+  brandColor: '#6B71D9',
   whiteColor: '#fff',
+  shadowColor: 'rgba(0, 0, 0, 0.5)',
 
   errorColor: '#f00',
 

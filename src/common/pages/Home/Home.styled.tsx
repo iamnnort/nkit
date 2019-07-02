@@ -1,14 +1,10 @@
 import styled from '../../theme/styled-components';
 
-export const Home = styled.section`
-  background-image: url("${require('../../../assets/images/ocean.jpeg')}");
-  background-size: cover;
-
-  height: 100vh;
-`;
+export const Home = styled.section``;
 
 export const WhitePapper = styled.div`
-  height: inherit;
+  margin-top: 100px;
+
   display: flex;
 `;
 

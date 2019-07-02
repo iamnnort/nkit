@@ -8,6 +8,7 @@
     "sourceMap": true,
     "target": "es5",
     "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
     "types": ["react"]
   },
   "include": ["./src/**/*", "index.d.ts", "images.d.ts", "fonts.d.ts"]
