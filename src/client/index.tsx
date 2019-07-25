@@ -15,18 +15,25 @@ import { Provider as StoreProvider } from 'react-redux';
 
 import { BrowserRouter } from 'react-router-dom';
 
+import { useSSR } from 'react-i18next';
+
 import Root from '../common/pages/Root/Root.container';
 import reducer, { State } from '../common/store';
 
 import env from '../common/lib/helpers/env';
-import '../common/i18n';
+import i18n from '../common/i18n';
 
 declare global {
   interface Window {
     __PRELOADED_STATE__: State;
+    __PRELOADED_I18N_STATE__: {
+      [language: string]: object;
+    };
+    __PRELOADED_LANGUAGE__: string;
   }
 }
 
+i18n();
 initReactFastclick();
 removeUniversalPortals();
 
@@ -35,13 +42,23 @@ delete window.__PRELOADED_STATE__;
 const middleware = applyMiddleware(thunk);
 const store = createStore(reducer, preloadedState, env.isDevelopment() ? composeWithDevTools(middleware) : middleware);
 
-ReactDOM.hydrate(
-  <StoreProvider store={store}>
-    <BrowserRouter>
-      <ThemeProvider theme={theme}>
-        <Root />
-      </ThemeProvider>
-    </BrowserRouter>
-  </StoreProvider>,
-  document.getElementById('root')
-);
+const preloadedI18nState = window.__PRELOADED_I18N_STATE__;
+delete window.__PRELOADED_I18N_STATE__;
+const preloadedLanguage = window.__PRELOADED_LANGUAGE__;
+delete window.__PRELOADED_LANGUAGE__;
+
+const App = () => {
+  useSSR(preloadedI18nState, preloadedLanguage);
+
+  return (
+    <StoreProvider store={store}>
+      <BrowserRouter>
+        <ThemeProvider theme={theme}>
+          <Root />
+        </ThemeProvider>
+      </BrowserRouter>
+    </StoreProvider>
+  );
+};
+
+ReactDOM.hydrate(<App />, document.getElementById('root'));

@@ -61,12 +61,25 @@ server.get('*', (req: Request, res: express.Response) => {
     const helmet = Helmet.renderStatic();
     const state = store.getState();
 
+    const i18nLanguage = req.i18n.language;
+    const i18nState = req.i18n.languages.reduce(
+      (state, language) => ({
+        ...state,
+        [language]: req.i18n.services.resourceStore.data[language],
+      }),
+      {}
+    );
+
     res.send(
       template({
         body,
         styles,
         helmet,
         state,
+        i18n: {
+          language: i18nLanguage,
+          state: i18nState,
+        },
       })
     );
   });

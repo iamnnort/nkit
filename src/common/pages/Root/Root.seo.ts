@@ -20,10 +20,10 @@ const seo = (t: i18next.TFunction) => ({
       property: 'og:url',
       content: `https://github.com/nikitapavets/react-ssr-ts-redux`,
     },
-    // {
-    //   property: 'og:image',
-    //   content: `https://github.com/nikitapavets/react-ssr-ts-redux`,
-    // },
+    {
+      property: 'og:image',
+      content: `/path/to/image`,
+    },
     {
       name: 'twitter:title',
       content: t('general:appTitle'),
@@ -36,10 +36,10 @@ const seo = (t: i18next.TFunction) => ({
       name: 'twitter:url',
       content: `https://github.com/nikitapavets/react-ssr-ts-redux`,
     },
-    // {
-    //   name: 'twitter:image',
-    //   content: `https://github.com/nikitapavets/react-ssr-ts-redux`,
-    // },
+    {
+      name: 'twitter:image',
+      content: `/path/to/image`,
+    },
   ],
 });
 

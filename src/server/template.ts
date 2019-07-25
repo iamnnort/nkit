@@ -7,11 +7,18 @@ const template = ({
   styles,
   helmet,
   state,
+  i18n,
 }: {
   body: string;
   styles: string;
   helmet: HelmetData;
   state: State;
+  i18n: {
+    language: string;
+    state: {
+      [language: string]: object;
+    };
+  };
 }) =>
   appendUniversalPortals(`
   <!doctype html>
@@ -50,7 +57,9 @@ const template = ({
     <div id="root">${body}</div>
   </body>
   <script>
-    window.__PRELOADED_STATE__ = ${JSON.stringify(state).replace(/</g, '\\u003c')}
+    window.__PRELOADED_STATE__ = ${JSON.stringify(state).replace(/</g, '\\u003c')};
+    window.__PRELOADED_I18N_STATE__ = ${JSON.stringify(i18n.state)};
+    window.__PRELOADED_LANGUAGE__ = "${i18n.language}";
   </script>
   <script src="/js/client.js" defer></script>
 

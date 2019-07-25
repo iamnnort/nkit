@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { renderRoutes } from 'react-router-config';
+import { RouteComponentProps } from 'react-router';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 
@@ -9,7 +10,7 @@ import Header from './Header/Header';
 
 import routes from '../../routes';
 
-const RootComponent = () => {
+const RootComponent: React.FC<RouteComponentProps> = () => {
   const { t } = useTranslation();
 
   return (

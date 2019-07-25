@@ -1,9 +1,10 @@
-import en from './en';
-import ru from './ru';
+import enGb from './enGb';
+import ruRu from './ruRu';
+import config from '../common/config';
 
 const locales = {
-  en,
-  ru,
+  [config.languages.enGb.short]: enGb,
+  [config.languages.ruRu.short]: ruRu,
 };
 
 export default locales;
