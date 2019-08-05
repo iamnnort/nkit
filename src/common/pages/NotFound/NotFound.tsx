@@ -2,13 +2,16 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 
+import { NotFound, NotFoundTitle } from './NotFound.styles';
+
 const NotFoundComponent: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <React.Fragment>
+    <NotFound>
       <Helmet title={t('general:notFound')} />
-    </React.Fragment>
+      <NotFoundTitle>{t('general:notFound')}</NotFoundTitle>
+    </NotFound>
   );
 };
 

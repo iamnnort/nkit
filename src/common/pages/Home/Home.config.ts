@@ -12,6 +12,9 @@ const config = {
     {
       value: 'Typescript - Type checking',
     },
+    {
+      value: 'i18n - Localisation',
+    },
   ],
 };
 
