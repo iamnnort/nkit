@@ -8,6 +8,12 @@ const config = {
     delete: 'DELETE' as Method,
   },
 
+  statuses: {
+    success: 200,
+    notFound: 404,
+    serverError: 500,
+  },
+
   url: process.env.API_URL,
   endPoints: {
     // API endpoints here

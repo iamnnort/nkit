@@ -1,6 +1,6 @@
 import { RouteProps } from 'react-router-dom';
 
-import Home from './pages/Home/Home.container';
+import Home from './pages/Home/Home';
 import NotFound from './pages/NotFound/NotFound';
 
 type RouteInterface = RouteProps & {

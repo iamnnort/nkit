@@ -1,5 +1,15 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useSelector, useDispatch } from 'react-redux';
+import { bindActionCreators, Dispatch } from 'redux';
+
+import {
+  selectIsReleasesLoaded,
+  selectIsReleasesLoading,
+  selectGetReleasesError,
+  selectGetReleases,
+} from '../../store/git/selectors';
+import { loadReleasesAction } from '../../store/git/actions';
 
 import {
   Home,
@@ -9,20 +19,21 @@ import {
   WhitePapperFeatures,
   WhitePapperReleases,
 } from './Home.styled';
-import { ComponentProps } from './Home.types';
 import config from './Home.config';
 import Releases from './Releases/Releases';
 import Features from './Features/Features';
 import { Loader } from '../../components';
 
-const HomeComponent: React.FC<ComponentProps> = ({
-  isReleasesLoaded,
-  isReleasesLoading,
-  releasesError,
-  releases,
-  loadReleases,
-}) => {
+const HomeComponent: React.FC = () => {
   const { t } = useTranslation();
+  const dispatch = useDispatch();
+
+  const isReleasesLoaded = useSelector(selectIsReleasesLoaded);
+  const isReleasesLoading = useSelector(selectIsReleasesLoading);
+  const releasesError = useSelector(selectGetReleasesError);
+  const releases = useSelector(selectGetReleases);
+
+  const loadReleases = React.useCallback(() => bindActionCreators(loadReleasesAction, dispatch), [dispatch]);
 
   React.useEffect(() => {
     if (!isReleasesLoaded) {
@@ -54,4 +65,9 @@ const HomeComponent: React.FC<ComponentProps> = ({
   );
 };
 
-export default HomeComponent;
+const serverFetch = () => (dispatch: Dispatch) => [bindActionCreators(loadReleasesAction, dispatch)()];
+
+export default {
+  component: HomeComponent,
+  serverFetch,
+};

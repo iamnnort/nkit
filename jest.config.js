@@ -25,8 +25,9 @@ module.exports = {
 
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
-    '^.+\\.css$': '<rootDir>/test/cssTransform.js',
-    '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '<rootDir>/test/fileTransform.js',
+    '^.+\\.svg$': 'jest-svg-transformer',
+    '^.+\\.css$': 'jest-transform-css',
+    '^.+\\.(jpg|jpeg|png|gif|webp)$': 'jest-transform-file',
   },
 
   snapshotSerializers: ['enzyme-to-json/serializer'],

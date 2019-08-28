@@ -8,7 +8,7 @@ import { CommonError } from '../../lib/store/types';
 export type State = Git;
 export type Action = ActionType<typeof actionsCreators>;
 
-const initialState: State = {
+export const initialState: State = {
   ...commonInitialState,
   releases: [],
 };

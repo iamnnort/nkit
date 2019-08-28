@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { shallow, mount, ShallowWrapper } from 'enzyme';
 
 import NotFoundComponent from './NotFound';
-import { NotFoundTitle } from './NotFound.styles';
+import { NotFoundTitle } from './NotFound.styled';
 
 describe('NotFoundComponent', () => {
   let wrapper: ShallowWrapper;

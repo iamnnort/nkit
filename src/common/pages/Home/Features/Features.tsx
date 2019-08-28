@@ -5,7 +5,7 @@ import { Features, FeaturesTitle, FeaturesList, FeaturesListItem } from './Featu
 import { ComponentProps } from './Features.types';
 import { Icon } from '../../../components';
 
-const ReleasesComponent: React.FC<ComponentProps> = ({ features }) => {
+const FeaturesComponent: React.FC<ComponentProps> = ({ features }) => {
   const { t } = useTranslation();
 
   return (
@@ -23,4 +23,4 @@ const ReleasesComponent: React.FC<ComponentProps> = ({ features }) => {
   );
 };
 
-export default ReleasesComponent;
+export default FeaturesComponent;

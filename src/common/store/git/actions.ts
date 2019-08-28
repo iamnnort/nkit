@@ -3,7 +3,7 @@ import { GitRelease } from './types';
 import { loadReleaseRequest, loadReleaseSuccess, loadReleaseFailure } from './actionsCreators';
 import controllers from '../../controllers';
 
-export const loadReleases = () => (dispatch: Dispatch) => {
+export const loadReleasesAction = () => (dispatch: Dispatch) => {
   dispatch(loadReleaseRequest());
 
   return controllers.git
