@@ -63,7 +63,7 @@ server.get('*', (req: Request, res: express.Response) => {
 
     const i18nLanguage = req.i18n.language;
     const i18nState = req.i18n.languages.reduce(
-      (state, language) => ({
+      (state, language: string) => ({
         ...state,
         [language]: req.i18n.services.resourceStore.data[language],
       }),
