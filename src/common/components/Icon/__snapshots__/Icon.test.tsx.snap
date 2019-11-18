@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconComponent should not regret 1`] = `
+<IconComponent
+  type="checkMark"
+  variant="default"
+>
+  <ForwardRef(SvgCheckMark)>
+    <svg>
+      CheckMark.svg
+    </svg>
+  </ForwardRef(SvgCheckMark)>
+</IconComponent>
+`;

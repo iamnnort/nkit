@@ -9,9 +9,9 @@ module.exports = {
 
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
 
-  setupFiles: ['<rootDir>/test/shim.js'],
+  setupFiles: ['<rootDir>/test/shim.ts'],
 
-  setupFilesAfterEnv: ['<rootDir>/test/enzume.ts'],
+  setupFilesAfterEnv: ['<rootDir>/test/enzume.ts', '<rootDir>/test/setupTest.ts'],
 
   testEnvironment: 'jsdom',
 
@@ -25,7 +25,7 @@ module.exports = {
 
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
-    '^.+\\.svg$': 'jest-svg-transformer',
+    '^.+\\.svg$': '<rootDir>/test/svgTransform.ts',
     '^.+\\.css$': 'jest-transform-css',
     '^.+\\.(jpg|jpeg|png|gif|webp)$': 'jest-transform-file',
   },

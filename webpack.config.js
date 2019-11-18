@@ -7,6 +7,7 @@ const typescript = require('./webpack/loaders/typescript');
 const javascript = require('./webpack/loaders/javascript');
 const css = require('./webpack/loaders/css');
 const style = require('./webpack/loaders/style');
+const svg = require('./webpack/loaders/svg');
 const image = require('./webpack/loaders/image');
 const fonts = require('./webpack/loaders/fonts');
 const env = require('./webpack/plugins/env');
@@ -31,7 +32,7 @@ const config = function(environment) {
       extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
     },
     module: {
-      rules: [typescript(), javascript(), image(), fonts()],
+      rules: [typescript(), javascript(), image(), fonts(), svg()],
     },
     plugins: [env()],
   };

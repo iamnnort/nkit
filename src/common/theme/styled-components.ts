@@ -40,13 +40,13 @@ enum FontFaceExts {
   otf = 'otf',
 }
 
-function fontFace(
+const fontFace = (
   name: string,
   src: string,
   weight = 'normal',
   style = 'normal',
   exts: FontFaceExts[] = [FontFaceExts.ttf]
-) {
+) => {
   const formats = {
     eot: 'eot',
     woff: 'woff',
@@ -72,7 +72,32 @@ function fontFace(
       font-style: ${style};
     }
 `;
-}
+};
 
-export { css, createGlobalStyle, keyframes, ServerStyleSheet, ThemeProvider, media, sizes, fontFace };
+const icon = ({
+  size,
+  color,
+  height,
+  width,
+}: {
+  size?: string;
+  color?: string;
+  height?: string;
+  width?: string;
+}) => css`
+  svg {
+    display: inherit;
+    width: ${width || size};
+    height: ${height || size};
+    min-width: ${width || size};
+    min-height: ${height || size};
+
+    &,
+    use {
+      fill: ${color};
+    }
+  }
+`;
+
+export { css, createGlobalStyle, keyframes, ServerStyleSheet, ThemeProvider, media, sizes, fontFace, icon };
 export default styled;

@@ -11,5 +11,11 @@
     "resolveJsonModule": true,
     "types": ["jest", "react"]
   },
-  "include": ["./src/**/*", "index.d.ts", "images.d.ts", "fonts.d.ts"]
+  "include": [
+    "./src/**/*",
+    "index.d.ts",
+    "images.d.ts",
+    "fonts.d.ts",
+    "jest.d.ts"
+  ]
 }
