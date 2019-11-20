@@ -24,7 +24,7 @@ describe('FeaturesComponent', () => {
     }
   }
 
-  beforeEach(async () => {
+  beforeEach(() => {
     wrapper = mount(<FeaturesComponent {...props} />);
   });
 
