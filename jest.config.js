@@ -3,15 +3,24 @@ module.exports = {
 
   clearMocks: true,
 
-  collectCoverageFrom: ['src/**/*.{ts,tsx,js,jsx}'],
+  collectCoverageFrom: ['<rootDir>/src/**/*.{ts,tsx,js,jsx}'],
 
   coverageDirectory: 'coverage',
+
+  coveragePathIgnorePatterns: [
+    '<rootDir>/src/locales',
+    '<rootDir>/src/client/index.tsx',
+    '<rootDir>/src/common/i18n.ts',
+    '<rootDir>/src/common/routes.tsx',
+    '<rootDir>/src/common/theme',
+    '<rootDir>/src/server',
+  ],
 
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
 
   setupFiles: ['<rootDir>/test/shim.ts'],
 
-  setupFilesAfterEnv: ['<rootDir>/test/enzume.ts', '<rootDir>/test/setupTest.ts'],
+  setupFilesAfterEnv: ['<rootDir>/test/enzume.ts', '<rootDir>/test/mocks.ts', '<rootDir>/test/setup.ts'],
 
   testEnvironment: 'jsdom',
 

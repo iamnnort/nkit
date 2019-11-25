@@ -11,3 +11,9 @@ declare namespace jest {
     toHaveStyleRule(property: string, value: any): void;
   }
 }
+
+declare module NodeJS {
+  interface Global {
+    mockComponent: (componentName: string, componentProps?: {}) => React.FC<{ originalComponent: string }>;
+  }
+}

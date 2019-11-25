@@ -6,6 +6,7 @@ import config from '../../../../config';
 
 const LangSwitcherComponent = () => {
   const { i18n } = useTranslation();
+
   const handleSwitch = React.useCallback((lang: string) => {
     i18n.changeLanguage(lang);
   }, []);

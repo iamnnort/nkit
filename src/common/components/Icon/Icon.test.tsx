@@ -12,7 +12,7 @@ describe('IconComponent', () => {
     variant: 'default',
   };
 
-  beforeEach(async () => {
+  beforeEach(() => {
     wrapper = mount(<Icon {...props} />);
   });
 

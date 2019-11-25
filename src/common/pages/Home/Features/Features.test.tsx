@@ -49,6 +49,7 @@ describe('FeaturesComponent', () => {
     });
 
     helpers.search('redux');
+    wrapper.find
 
     expect(
       wrapper.find(FeaturesListItem).filterWhere((featuresListItem) => featuresListItem.prop('isSelected') === true)

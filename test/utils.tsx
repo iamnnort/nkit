@@ -1,22 +1,40 @@
 import * as React from 'react';
-import { Provider as StoreProvider } from 'react-redux';
-import thunk from 'redux-thunk';
-import configureMockStore from 'redux-mock-store';
+import { ReactWrapper, ShallowWrapper } from 'enzyme';
 
-import { ThemeProvider } from '../src/common/theme/styled-components';
-import { theme } from '../src/common/theme/theme';
-
-import { State } from '../src/common/store';
-
-const middlewares = [thunk];
-const mockStore = configureMockStore(middlewares);
-
-export const TestProvider: React.FC<{ store?: State }> = ({ store = {}, children }) => {
-  return (
-    <StoreProvider store={mockStore(store)}>
-      <ThemeProvider theme={theme}>
-        <React.Fragment>{children}</React.Fragment>
-      </ThemeProvider>
-    </StoreProvider>
-  );
+const MockComponent: React.FC = (props) => {
+  return <>{props.children}</>;
 };
+
+export function mockComponent(componentName: string, componentProps = {}): React.FC<{ originalComponent: string }> {
+  return (props) => {
+    return (
+      <MockComponent originalComponent={componentName} {...props} {...componentProps}>
+        {props.children}
+      </MockComponent>
+    );
+  };
+}
+
+export function mockEventListeners(element = document) {
+  const proxy = element;
+  const eventMap: {
+    [key: string]: any;
+  } = {};
+
+  const simulate = (event: string, data = {}) => {
+    eventMap[event](data);
+  };
+
+  proxy.addEventListener = jest.fn((event, cb) => {
+    eventMap[event] = cb;
+  });
+
+  return { eventMap, simulate };
+}
+
+export function findMock(wrapper: ReactWrapper | ShallowWrapper, componentName: string) {
+  return wrapper.findWhere(
+    (element: ReactWrapper | ShallowWrapper) =>
+      element.is(MockComponent) && element.prop('originalComponent') === componentName
+  );
+}

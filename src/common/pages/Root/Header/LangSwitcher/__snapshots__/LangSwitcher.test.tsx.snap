@@ -1,0 +1,227 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LangSwitcherComponent should not regret 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-width: 50px;
+  margin-left: 5px;
+  padding: 5px;
+  border: 1px solid;
+  background: none;
+  cursor: pointer;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-width: 50px;
+  margin-left: 5px;
+  padding: 5px;
+  border: 1px solid;
+  background: none;
+  cursor: pointer;
+  background: undefined;
+  color: undefined;
+}
+
+<LangSwitcherComponent>
+  <styled.div>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": true,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  display: flex;
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <div
+        className="c0"
+      >
+        <styled.button
+          isActive={false}
+          onClick={[Function]}
+        >
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bwzfXH",
+                  "isStatic": false,
+                  "lastClassName": "c2",
+                  "rules": Array [
+                    "
+  display: flex;
+  justify-content: center;
+
+  min-width: 50px;
+
+  margin-left: 5px;
+  padding: 5px;
+  border: 1px solid ",
+                    [Function],
+                    ";
+
+  background: none;
+  color: ",
+                    [Function],
+                    ";
+  font-size: ",
+                    [Function],
+                    ";
+  cursor: pointer;
+
+  &:hover {
+    background: ",
+                    [Function],
+                    ";
+    color: ",
+                    [Function],
+                    ";
+  }
+
+  ",
+                    [Function],
+                    "
+",
+                  ],
+                },
+                "displayName": "styled.button",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bwzfXH",
+                "target": "button",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+            isActive={false}
+            onClick={[Function]}
+          >
+            <button
+              className="c1"
+              onClick={[Function]}
+            >
+              English
+            </button>
+          </StyledComponent>
+        </styled.button>
+        <styled.button
+          isActive={true}
+          onClick={[Function]}
+        >
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bwzfXH",
+                  "isStatic": false,
+                  "lastClassName": "c2",
+                  "rules": Array [
+                    "
+  display: flex;
+  justify-content: center;
+
+  min-width: 50px;
+
+  margin-left: 5px;
+  padding: 5px;
+  border: 1px solid ",
+                    [Function],
+                    ";
+
+  background: none;
+  color: ",
+                    [Function],
+                    ";
+  font-size: ",
+                    [Function],
+                    ";
+  cursor: pointer;
+
+  &:hover {
+    background: ",
+                    [Function],
+                    ";
+    color: ",
+                    [Function],
+                    ";
+  }
+
+  ",
+                    [Function],
+                    "
+",
+                  ],
+                },
+                "displayName": "styled.button",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bwzfXH",
+                "target": "button",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+            isActive={true}
+            onClick={[Function]}
+          >
+            <button
+              className="c2"
+              onClick={[Function]}
+            >
+              Русский
+            </button>
+          </StyledComponent>
+        </styled.button>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</LangSwitcherComponent>
+`;

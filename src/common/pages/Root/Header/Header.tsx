@@ -5,9 +5,9 @@ import LangSwitcher from './LangSwitcher/LangSwitcher';
 
 const HeaderComponent = () => {
   return (
-    <Header>
+    <div>
       <LangSwitcher />
-    </Header>
+    </div>
   );
 };
 
