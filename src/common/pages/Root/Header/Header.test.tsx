@@ -3,6 +3,8 @@ import { mount, ReactWrapper } from 'enzyme';
 
 import HeaderComponent from './Header';
 
+jest.mock('./LangSwitcher/LangSwitcher', () => global.mockComponent('LangSwitcher'));
+
 describe('HeaderComponent', () => {
   let wrapper: ReactWrapper;
 

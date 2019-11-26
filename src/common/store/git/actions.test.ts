@@ -10,15 +10,15 @@ import config from '../../config';
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 const store = mockStore();
-const mock = new MockAdapter(axios);
+const mockRequest = new MockAdapter(axios);
 
 describe('git actions', () => {
-  afterEach(() => {
-    mock.restore();
+  beforeEach(() => {
+    mockRequest.reset();
     store.clearActions();
   });
 
-  it('should create LOAD_RELEASES_SUCCESS when fetching git releases has been done', () => {
+  it(`should create ${ActionTypes.LOAD_RELEASES_SUCCESS} action when fetching git releases has been done`, () => {
     const url = config.api.gitUrl + config.api.gitEndPoints.getReleases();
     const response = [
       {
@@ -29,7 +29,7 @@ describe('git actions', () => {
       },
     ];
 
-    mock.onGet(url).reply(config.api.statuses.success, response);
+    mockRequest.onGet(url).replyOnce(config.api.statuses.success, response);
 
     const expectedActions = [
       { type: ActionTypes.LOAD_RELEASES_REQUEST },
@@ -38,6 +38,18 @@ describe('git actions', () => {
         payload: response,
       },
     ];
+
+    return loadReleasesAction()(store.dispatch).then(() => {
+      expect(store.getActions()).toEqual(expectedActions);
+    });
+  });
+
+  it(`should create ${ActionTypes.LOAD_RELEASES_FAILURE} action when fetching git releases has not been done`, () => {
+    const url = config.api.gitUrl + config.api.gitEndPoints.getReleases();
+
+    mockRequest.onGet(url).networkErrorOnce();
+
+    const expectedActions = [{ type: ActionTypes.LOAD_RELEASES_REQUEST }, { type: ActionTypes.LOAD_RELEASES_FAILURE }];
 
     return loadReleasesAction()(store.dispatch).then(() => {
       expect(store.getActions()).toEqual(expectedActions);

@@ -13,6 +13,8 @@ module.exports = {
     '<rootDir>/src/common/i18n.ts',
     '<rootDir>/src/common/routes.tsx',
     '<rootDir>/src/common/theme',
+    '<rootDir>/src/common/store/index.ts',
+    '<rootDir>/src/common/pages/Root/Root.*',
     '<rootDir>/src/server',
   ],
 

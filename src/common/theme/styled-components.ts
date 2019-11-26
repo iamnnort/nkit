@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-object-literal-type-assertion, @typescript-eslint/no-explicit-any */
 import * as styledComponents from 'styled-components';
 import { ServerStyleSheet, ThemedStyledComponentsModule } from 'styled-components';
 import { ThemeInterface } from './theme';

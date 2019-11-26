@@ -16,19 +16,55 @@ describe('LangSwitcherComponent', () => {
   });
 
   it(`should activate a button after clicked on another one`, () => {
-    expect(wrapper.find(LangSwitcherItem).at(0).props().isActive).toBe(false);
-    expect(wrapper.find(LangSwitcherItem).at(1).props().isActive).toBe(true);
+    expect(
+      wrapper
+        .find(LangSwitcherItem)
+        .at(0)
+        .props().isActive
+    ).toBe(false);
+    expect(
+      wrapper
+        .find(LangSwitcherItem)
+        .at(1)
+        .props().isActive
+    ).toBe(true);
 
-    wrapper.find(LangSwitcherItem).at(0).simulate('click');
+    wrapper
+      .find(LangSwitcherItem)
+      .at(0)
+      .simulate('click');
     wrapper = mount(<LangSwitcherComponent />);
 
-    expect(wrapper.find(LangSwitcherItem).at(0).props().isActive).toBe(true);
-    expect(wrapper.find(LangSwitcherItem).at(1).props().isActive).toBe(false);
+    expect(
+      wrapper
+        .find(LangSwitcherItem)
+        .at(0)
+        .props().isActive
+    ).toBe(true);
+    expect(
+      wrapper
+        .find(LangSwitcherItem)
+        .at(1)
+        .props().isActive
+    ).toBe(false);
 
-    wrapper.find(LangSwitcherItem).at(1).simulate('click');
+    wrapper
+      .find(LangSwitcherItem)
+      .at(1)
+      .simulate('click');
     wrapper = mount(<LangSwitcherComponent />);
 
-    expect(wrapper.find(LangSwitcherItem).at(0).props().isActive).toBe(false);
-    expect(wrapper.find(LangSwitcherItem).at(1).props().isActive).toBe(true);
+    expect(
+      wrapper
+        .find(LangSwitcherItem)
+        .at(0)
+        .props().isActive
+    ).toBe(false);
+    expect(
+      wrapper
+        .find(LangSwitcherItem)
+        .at(1)
+        .props().isActive
+    ).toBe(true);
   });
 });

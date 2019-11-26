@@ -1,8 +1,12 @@
 import * as React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
+import * as redux from 'redux';
 
 import HomeComponent from './Home';
 import { TestProvider } from '../../../../test';
+
+jest.mock('./Releases/Releases', () => global.mockComponent('Releases'));
+jest.mock('./Features/Features', () => global.mockComponent('Features'));
 
 describe('HomeComponent', () => {
   let wrapper: ReactWrapper;
@@ -33,5 +37,28 @@ describe('HomeComponent', () => {
 
   it(`should not regret`, () => {
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it(`should loader releases if they have not beed loaded`, () => {
+    const bindActionCreators = jest.spyOn(redux, 'bindActionCreators');
+
+    expect(bindActionCreators).toHaveBeenCalledTimes(0);
+
+    wrapper = mount(
+      <TestProvider
+        store={{
+          git: {
+            isInitialLoaded: false,
+            isLoading: false,
+            error: '',
+            releases: [],
+          },
+        }}
+      >
+        <HomeComponent.component />
+      </TestProvider>
+    );
+
+    expect(bindActionCreators).toHaveBeenCalledTimes(1);
   });
 });

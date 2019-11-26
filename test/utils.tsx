@@ -5,13 +5,18 @@ const MockComponent: React.FC = (props) => {
   return <>{props.children}</>;
 };
 
-export function mockComponent(componentName: string, componentProps = {}): React.FC<{ originalComponent: string }> {
-  return (props) => {
-    return (
-      <MockComponent originalComponent={componentName} {...props} {...componentProps}>
-        {props.children}
-      </MockComponent>
-    );
+export function mockComponent(
+  componentName: string,
+  componentProps = {}
+): { default: React.FC<{ originalComponent: string }> } {
+  return {
+    default: (props) => {
+      return (
+        <MockComponent originalComponent={componentName} {...props} {...componentProps}>
+          {props.children}
+        </MockComponent>
+      );
+    },
   };
 }
 
@@ -33,8 +38,7 @@ export function mockEventListeners(element = document) {
 }
 
 export function findMock(wrapper: ReactWrapper | ShallowWrapper, componentName: string) {
-  return wrapper.findWhere(
-    (element: ReactWrapper | ShallowWrapper) =>
-      element.is(MockComponent) && element.prop('originalComponent') === componentName
-  );
+  return wrapper.findWhere((element: ReactWrapper | ShallowWrapper) => {
+    return element.is(MockComponent) && element.prop('originalComponent') === componentName;
+  });
 }

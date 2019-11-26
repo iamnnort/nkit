@@ -4,14 +4,14 @@ import { loadReleaseRequest, loadReleaseSuccess, loadReleaseFailure } from './ac
 import { CommonError } from '../../lib/store/types';
 
 describe('git reducer', () => {
-  it(`should handle ${ActionTypes.LOAD_RELEASES_REQUEST}`, () => {
+  it(`should handle ${ActionTypes.LOAD_RELEASES_REQUEST} action`, () => {
     expect(reducer(initialState, loadReleaseRequest())).toEqual({
       ...initialState,
       isLoading: true,
     });
   });
 
-  it(`should handle ${ActionTypes.LOAD_RELEASES_SUCCESS}`, () => {
+  it(`should handle ${ActionTypes.LOAD_RELEASES_SUCCESS} action`, () => {
     expect(
       reducer(
         initialState,
@@ -39,7 +39,7 @@ describe('git reducer', () => {
     });
   });
 
-  it(`should handle ${ActionTypes.LOAD_RELEASES_FAILURE}`, () => {
+  it(`should handle ${ActionTypes.LOAD_RELEASES_FAILURE} action`, () => {
     expect(reducer(initialState, loadReleaseFailure())).toEqual({
       ...initialState,
       isLoading: false,

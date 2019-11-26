@@ -19,4 +19,12 @@ describe('IconComponent', () => {
   it(`should not regret`, () => {
     expect(wrapper).toMatchSnapshot();
   });
+
+  it(`should return default "i" tag if a pair of type/variant is not found`, () => {
+    wrapper.setProps({
+      variant: 'active',
+    });
+
+    expect(wrapper.exists('i')).toBe(true);
+  });
 });

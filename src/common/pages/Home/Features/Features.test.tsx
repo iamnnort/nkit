@@ -4,7 +4,8 @@ import { mount, ReactWrapper } from 'enzyme';
 import FeaturesComponent from './Features';
 import { FeaturesSearch, FeaturesListItem, FeaturesTitle } from './Features.styled';
 import { ComponentProps } from './Features.types';
-import { Icon } from '../../../components';
+
+jest.mock('../../../components/Icon/Icon', () => global.mockComponent('Icon'));
 
 describe('FeaturesComponent', () => {
   let wrapper: ReactWrapper;
@@ -21,8 +22,8 @@ describe('FeaturesComponent', () => {
     search(value: string) {
       const input = wrapper.find(FeaturesSearch);
       input.simulate('change', { target: { value } });
-    }
-  }
+    },
+  };
 
   beforeEach(() => {
     wrapper = mount(<FeaturesComponent {...props} />);
@@ -49,7 +50,6 @@ describe('FeaturesComponent', () => {
     });
 
     helpers.search('redux');
-    wrapper.find
 
     expect(
       wrapper.find(FeaturesListItem).filterWhere((featuresListItem) => featuresListItem.prop('isSelected') === true)
@@ -77,7 +77,7 @@ describe('FeaturesComponent', () => {
 
   describe('should have FeaturesListItem which', () => {
     it(`should have an icon`, () => {
-      expect(wrapper.exists(Icon)).toEqual(true);
+      expect(global.findMock(wrapper, 'Icon').length).toEqual(1);
     });
   });
 });

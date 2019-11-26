@@ -13,17 +13,20 @@ const FeaturesComponent: React.FC<ComponentProps> = ({ features }) => {
   const filteredFeatures = React.useMemo(() => {
     const regex = new RegExp(searchValue, 'i');
 
-    return features.map(feature => {
+    return features.map((feature) => {
       return {
         ...feature,
         isSelected: regex.test(feature.value),
-      }
-    })
+      };
+    });
   }, [features, searchValue]);
 
-  const handleChangeSearch = React.useCallback((event) => {
-    setSearchValue(event.target.value);
-  }, [setSearchValue]);
+  const handleChangeSearch = React.useCallback(
+    (event) => {
+      setSearchValue(event.target.value);
+    },
+    [setSearchValue]
+  );
 
   return (
     <Features>

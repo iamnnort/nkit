@@ -2,7 +2,7 @@ import * as actionsCreators from './actionsCreators';
 import { ActionTypes } from './types';
 
 describe('git actions creators', () => {
-  it('should create LOAD_RELEASES_REQUEST action creator', () => {
+  it(`should create ${ActionTypes.LOAD_RELEASES_REQUEST} action creator`, () => {
     const expectedAction = {
       type: ActionTypes.LOAD_RELEASES_REQUEST,
     };
@@ -10,7 +10,7 @@ describe('git actions creators', () => {
     expect(actionsCreators.loadReleaseRequest()).toEqual(expectedAction);
   });
 
-  it('should create LOAD_RELEASES_SUCCESS action creator', () => {
+  it(`should create ${ActionTypes.LOAD_RELEASES_SUCCESS} action creator`, () => {
     const payload = [
       {
         id: 1,
@@ -27,7 +27,7 @@ describe('git actions creators', () => {
     expect(actionsCreators.loadReleaseSuccess(payload)).toEqual(expectedAction);
   });
 
-  it('should create LOAD_RELEASES_FAILURE action creator', () => {
+  it(`should create ${ActionTypes.LOAD_RELEASES_FAILURE} action creator`, () => {
     const expectedAction = {
       type: ActionTypes.LOAD_RELEASES_FAILURE,
     };

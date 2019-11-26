@@ -11,11 +11,16 @@
     "resolveJsonModule": true,
     "types": ["jest", "react"]
   },
-  "include": [
-    "./src/**/*",
-    "index.d.ts",
-    "images.d.ts",
-    "fonts.d.ts",
-    "jest.d.ts"
+  "files": [
+    "./index.d.ts",
+    "./images.d.ts",
+    "./fonts.d.ts",
+    "./jest.d.ts"
+  ],
+  "include": ["src/**/*"],
+  "exclude": [
+    "node_modules",
+    "**/__tests__/**/*.(ts|tsx|js|jsx)",
+    "**/?(*.)+(spec|test).(ts|tsx|js|jsx)"
   ]
 }

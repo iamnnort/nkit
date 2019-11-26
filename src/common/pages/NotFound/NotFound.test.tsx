@@ -1,19 +1,18 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
-import { shallow, mount, ShallowWrapper } from 'enzyme';
+import { mount, ReactWrapper } from 'enzyme';
 
 import NotFoundComponent from './NotFound';
 import { NotFoundTitle } from './NotFound.styled';
 
 describe('NotFoundComponent', () => {
-  let wrapper: ShallowWrapper;
+  let wrapper: ReactWrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<NotFoundComponent.component />);
+    wrapper = mount(<NotFoundComponent.component />);
   });
 
   it('sets document title', () => {
-    mount(<NotFoundComponent.component />);
     const helmet = Helmet.peek();
     expect(helmet.title).toEqual('general:notFound');
   });
