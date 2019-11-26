@@ -1,5 +1,3 @@
-import { mockComponent } from './utils';
-
 jest.mock('react-i18next', () => {
   const state = {
     language: 'ru-RU',

@@ -13,6 +13,8 @@ module.exports = {
     '<rootDir>/src/common/i18n.ts',
     '<rootDir>/src/common/routes.tsx',
     '<rootDir>/src/common/theme',
+    '<rootDir>/src/common/store/index.ts',
+    '<rootDir>/src/common/pages/Root/Root.*',
     '<rootDir>/src/server',
   ],
 
@@ -20,7 +22,7 @@ module.exports = {
 
   setupFiles: ['<rootDir>/test/shim.ts'],
 
-  setupFilesAfterEnv: ['<rootDir>/test/enzume.ts', '<rootDir>/test/mocks.ts', '<rootDir>/test/setup.ts'],
+  setupFilesAfterEnv: ['<rootDir>/test/enzyme.ts', '<rootDir>/test/mocks.ts', '<rootDir>/test/setup.ts'],
 
   testEnvironment: 'jsdom',
 

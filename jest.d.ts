@@ -12,8 +12,10 @@ declare namespace jest {
   }
 }
 
-declare module NodeJS {
+declare namespace NodeJS {
   interface Global {
-    mockComponent: (componentName: string, componentProps?: {}) => React.FC<{ originalComponent: string }>;
+    mockComponent: (componentName: string, componentProps?: {}) => { default: React.FC<{ originalComponent: string }> };
+    findMock: (wrapper: any, componentName: string) => any;
+    mockEventListeners: (element: any) => any;
   }
 }

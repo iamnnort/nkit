@@ -1,21 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FeaturesComponent should not regret 1`] = `
+exports[`ReleasesComponent should not regret 1`] = `
 .c0 {
   font-weight: bold;
 }
 
 .c1 {
-  width: 100%;
-  padding: 5px;
-  border: 1px solid;
-}
-
-.c2 {
   padding-left: 5px;
 }
 
-.c3 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26,19 +20,18 @@ exports[`FeaturesComponent should not regret 1`] = `
   align-items: center;
 }
 
-.c3 svg {
+.c2 svg {
   margin-right: 10px;
 }
 
-.c3 svg {
-  display: inherit;
-}
-
-<FeaturesComponent
-  features={
+<ReleasesComponent
+  releases={
     Array [
       Object {
-        "value": "React - Main library",
+        "html_url": "fake_url",
+        "id": 1,
+        "name": "Fake name",
+        "tag_name": "fake_name",
       },
     ]
   }
@@ -104,14 +97,11 @@ exports[`FeaturesComponent should not regret 1`] = `
             <div
               className="c0"
             >
-              general:features
+              general:releases
             </div>
           </StyledComponent>
         </styled.div>
-        <styled.input
-          onChange={[Function]}
-          value="re"
-        >
+        <styled.div>
           <StyledComponent
             forwardedComponent={
               Object {
@@ -121,51 +111,6 @@ exports[`FeaturesComponent should not regret 1`] = `
                   "componentId": "sc-htpNat",
                   "isStatic": false,
                   "lastClassName": "c1",
-                  "rules": Array [
-                    "
-  width: 100%;
-
-  margin-top: ",
-                    [Function],
-                    ";
-  padding: 5px;
-  border: 1px solid ",
-                    [Function],
-                    ";
-",
-                  ],
-                },
-                "displayName": "styled.input",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-htpNat",
-                "target": "input",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            onChange={[Function]}
-            value="re"
-          >
-            <input
-              className="c1"
-              onChange={[Function]}
-              value="re"
-            />
-          </StyledComponent>
-        </styled.input>
-        <styled.div>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-bxivhb",
-                  "isStatic": false,
-                  "lastClassName": "c2",
                   "rules": Array [
                     "
   margin-top: ",
@@ -178,7 +123,7 @@ exports[`FeaturesComponent should not regret 1`] = `
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-bxivhb",
+                "styledComponentId": "sc-htpNat",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -188,11 +133,10 @@ exports[`FeaturesComponent should not regret 1`] = `
             forwardedRef={null}
           >
             <div
-              className="c2"
+              className="c1"
             >
               <styled.div
-                isSelected={true}
-                key="React - Main library"
+                key="1"
               >
                 <StyledComponent
                   forwardedComponent={
@@ -200,9 +144,9 @@ exports[`FeaturesComponent should not regret 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-ifAKCX",
-                        "isStatic": false,
-                        "lastClassName": "c3",
+                        "componentId": "sc-bxivhb",
+                        "isStatic": true,
+                        "lastClassName": "c2",
                         "rules": Array [
                           "
   display: flex;
@@ -211,17 +155,13 @@ exports[`FeaturesComponent should not regret 1`] = `
   svg {
     margin-right: 10px;
   }
-
-  ",
-                          [Function],
-                          "
 ",
                         ],
                       },
                       "displayName": "styled.div",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-ifAKCX",
+                      "styledComponentId": "sc-bxivhb",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -229,20 +169,56 @@ exports[`FeaturesComponent should not regret 1`] = `
                     }
                   }
                   forwardedRef={null}
-                  isSelected={true}
                 >
                   <div
-                    className="c3"
+                    className="c2"
                   >
                     <default
-                      type="checkMark"
+                      type="tag"
                     >
                       <MockComponent
                         originalComponent="Icon"
-                        type="checkMark"
+                        type="tag"
                       />
                     </default>
-                    React - Main library
+                    <styled.a
+                      href="fake_url"
+                      target="_blank"
+                    >
+                      <StyledComponent
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-ifAKCX",
+                              "isStatic": true,
+                              "lastClassName": "cFlEyZ",
+                              "rules": Array [],
+                            },
+                            "displayName": "styled.a",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-ifAKCX",
+                            "target": "a",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
+                        href="fake_url"
+                        target="_blank"
+                      >
+                        <a
+                          className=""
+                          href="fake_url"
+                          target="_blank"
+                        >
+                          fake_name (Fake name)
+                        </a>
+                      </StyledComponent>
+                    </styled.a>
                   </div>
                 </StyledComponent>
               </styled.div>
@@ -252,5 +228,5 @@ exports[`FeaturesComponent should not regret 1`] = `
       </section>
     </StyledComponent>
   </styled.section>
-</FeaturesComponent>
+</ReleasesComponent>
 `;

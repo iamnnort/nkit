@@ -14,8 +14,9 @@
     "test:jest": "jest",
     "test:jest:watch": "jest --watch",
     "test:jest:coverage": "jest --coverage --colors",
+    "test:jest:clean": "jest --clearCache",
     "test:lint:js": "eslint src/ --ext=js --ext=jsx --ext=ts --ext=tsx --fix",
-    "test:lint:styled": "stylelint --config=.stylelintrc '**/*.styled.*'",
+    "test:lint:styled": "stylelint --config=.stylelintrc '**/*.styled.(js|jsx|ts|tsx)'",
     "test": "run-s test:**",
     "clean": "rm -rf build"
   },

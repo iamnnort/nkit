@@ -36,7 +36,8 @@ export const reducer: Reducer<State, Action> = (state = initialState, action) =>
         error: CommonError.FAILED_REQUEST,
       };
 
-    default:
+    default: {
       return state;
+    }
   }
 };
