@@ -1,6 +1,6 @@
 import { reducer, initialState } from './reducer';
 import { ActionTypes } from './types';
-import { loadReleaseRequest, loadReleaseSuccess, loadReleaseFailure } from './actionsCreators';
+import { loadReleaseRequest, loadReleaseSuccess, loadReleaseFailure } from './actions';
 import { CommonError } from '../../lib/store/types';
 
 describe('git reducer', () => {

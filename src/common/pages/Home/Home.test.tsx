@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
-import * as redux from 'redux';
 
 import HomeComponent from './Home';
 import { TestProvider } from '../../../../test';
+import * as gitActions from '../../store/git/actions';
 
 jest.mock('./Releases/Releases', () => global.mockComponent('Releases'));
 jest.mock('./Features/Features', () => global.mockComponent('Features'));
@@ -40,9 +40,9 @@ describe('HomeComponent', () => {
   });
 
   it(`should loader releases if they have not beed loaded`, () => {
-    const bindActionCreators = jest.spyOn(redux, 'bindActionCreators');
+    const loadReleaseRequest = jest.spyOn(gitActions, 'loadReleaseRequest');
 
-    expect(bindActionCreators).toHaveBeenCalledTimes(0);
+    expect(loadReleaseRequest).toHaveBeenCalledTimes(0);
 
     wrapper = mount(
       <TestProvider
@@ -59,6 +59,6 @@ describe('HomeComponent', () => {
       </TestProvider>
     );
 
-    expect(bindActionCreators).toHaveBeenCalledTimes(1);
+    expect(loadReleaseRequest).toHaveBeenCalledTimes(1);
   });
 });

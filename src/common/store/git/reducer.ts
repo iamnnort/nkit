@@ -1,6 +1,6 @@
 import { Reducer } from 'redux';
 import { ActionType } from 'typesafe-actions';
-import * as actionsCreators from './actionsCreators';
+import * as actionsCreators from './actions';
 import { ActionTypes, Git } from './types';
 import { commonInitialState } from '../../lib/store/reducer';
 import { CommonError } from '../../lib/store/types';

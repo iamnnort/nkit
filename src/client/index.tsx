@@ -9,7 +9,7 @@ import { ThemeProvider } from '../common/theme/styled-components';
 import { theme } from '../common/theme/theme';
 
 import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import createSagaMiddleware from 'redux-saga';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { Provider as StoreProvider } from 'react-redux';
 
@@ -18,7 +18,8 @@ import { BrowserRouter } from 'react-router-dom';
 import { useSSR } from 'react-i18next';
 
 import Root from '../common/pages/Root/Root.container';
-import reducer, { State } from '../common/store';
+import reducer, { State } from '../common/store/reducer';
+import sagas from '../common/store/sagas';
 
 import env from '../common/lib/helpers/env';
 import i18n from '../common/i18n';
@@ -39,8 +40,10 @@ removeUniversalPortals();
 
 const preloadedState = window.__PRELOADED_STATE__;
 delete window.__PRELOADED_STATE__;
-const middleware = applyMiddleware(thunk);
+const sagaMiddleware = createSagaMiddleware();
+const middleware = applyMiddleware(sagaMiddleware);
 const store = createStore(reducer, preloadedState, env.isDevelopment() ? composeWithDevTools(middleware) : middleware);
+sagaMiddleware.run(sagas);
 
 const preloadedI18nState = window.__PRELOADED_I18N_STATE__;
 delete window.__PRELOADED_I18N_STATE__;

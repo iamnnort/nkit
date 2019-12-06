@@ -1,58 +1,37 @@
-import axios from 'axios';
-import MockAdapter from 'axios-mock-adapter';
-import thunk from 'redux-thunk';
-import configureMockStore from 'redux-mock-store';
-
-import { loadReleasesAction } from './actions';
+import * as actionsCreators from './actions';
 import { ActionTypes } from './types';
-import config from '../../config';
 
-const middlewares = [thunk];
-const mockStore = configureMockStore(middlewares);
-const store = mockStore();
-const mockRequest = new MockAdapter(axios);
+describe('git actions creators', () => {
+  it(`should create ${ActionTypes.LOAD_RELEASES_REQUEST} action creator`, () => {
+    const expectedAction = {
+      type: ActionTypes.LOAD_RELEASES_REQUEST,
+    };
 
-describe('git actions', () => {
-  beforeEach(() => {
-    mockRequest.reset();
-    store.clearActions();
+    expect(actionsCreators.loadReleaseRequest()).toEqual(expectedAction);
   });
 
-  it(`should create ${ActionTypes.LOAD_RELEASES_SUCCESS} action when fetching git releases has been done`, () => {
-    const url = config.api.gitUrl + config.api.gitEndPoints.getReleases();
-    const response = [
+  it(`should create ${ActionTypes.LOAD_RELEASES_SUCCESS} action creator`, () => {
+    const payload = [
       {
-        html_url: 'https://github.com/nikitapavets/react-ssr-ts-redux/releases/tag/v1',
         id: 1,
         name: 'Release v1',
         tag_name: 'v1',
+        html_url: 'https://github.com/nikitapavets/react-ssr-ts-redux/releases/tag/v1',
       },
     ];
+    const expectedAction = {
+      type: ActionTypes.LOAD_RELEASES_SUCCESS,
+      payload,
+    };
 
-    mockRequest.onGet(url).replyOnce(config.api.statuses.success, response);
-
-    const expectedActions = [
-      { type: ActionTypes.LOAD_RELEASES_REQUEST },
-      {
-        type: ActionTypes.LOAD_RELEASES_SUCCESS,
-        payload: response,
-      },
-    ];
-
-    return loadReleasesAction()(store.dispatch).then(() => {
-      expect(store.getActions()).toEqual(expectedActions);
-    });
+    expect(actionsCreators.loadReleaseSuccess(payload)).toEqual(expectedAction);
   });
 
-  it(`should create ${ActionTypes.LOAD_RELEASES_FAILURE} action when fetching git releases has not been done`, () => {
-    const url = config.api.gitUrl + config.api.gitEndPoints.getReleases();
+  it(`should create ${ActionTypes.LOAD_RELEASES_FAILURE} action creator`, () => {
+    const expectedAction = {
+      type: ActionTypes.LOAD_RELEASES_FAILURE,
+    };
 
-    mockRequest.onGet(url).networkErrorOnce();
-
-    const expectedActions = [{ type: ActionTypes.LOAD_RELEASES_REQUEST }, { type: ActionTypes.LOAD_RELEASES_FAILURE }];
-
-    return loadReleasesAction()(store.dispatch).then(() => {
-      expect(store.getActions()).toEqual(expectedActions);
-    });
+    expect(actionsCreators.loadReleaseFailure()).toEqual(expectedAction);
   });
 });

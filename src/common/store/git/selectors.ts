@@ -1,4 +1,4 @@
-import { State } from '../index';
+import { State } from '../reducer';
 
 export const selectIsReleasesLoaded = (state: State) => state.git.isInitialLoaded;
 
