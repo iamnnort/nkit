@@ -11,6 +11,7 @@ import { I18nextProvider } from 'react-i18next';
 import staticFiles from './middlewares/staticFiles';
 import i18n from './middlewares/i18n';
 
+import config from './config';
 import { Request } from './types';
 import template from './template';
 
@@ -20,8 +21,6 @@ import { theme } from '../common/theme/theme';
 import reducer from '../common/store/reducer';
 import { waitAll } from '../common/store/sagas';
 import routes from '../common/routes';
-
-const PORT = process.env.PORT || 3000;
 
 const server = express();
 
@@ -91,4 +90,4 @@ server.get('*', (req: Request, res: express.Response) => {
   store.dispatch(END);
 });
 
-server.listen(PORT, () => console.log(`App listening on http://127.0.0.1:${PORT} [OK]`));
+server.listen(config.port, () => console.log(`App listening on http://127.0.0.1:${config.port} [OK]`));
