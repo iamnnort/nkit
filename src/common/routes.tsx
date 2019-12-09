@@ -4,7 +4,7 @@ import Home from './pages/Home/Home';
 import NotFound from './pages/NotFound/NotFound';
 
 type RouteInterface = RouteProps & {
-  serverFetch?: any;
+  preload?: any;
 };
 
 const routes: RouteInterface[] = [

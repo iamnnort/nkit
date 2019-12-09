@@ -1,13 +1,8 @@
-import { Dispatch } from 'redux';
-import { GitRelease } from './types';
-import { loadReleaseRequest, loadReleaseSuccess, loadReleaseFailure } from './actionsCreators';
-import controllers from '../../controllers';
+import { action } from 'typesafe-actions';
+import { ActionTypes, GitRelease } from './types';
 
-export const loadReleasesAction = () => (dispatch: Dispatch) => {
-  dispatch(loadReleaseRequest());
+export const loadReleaseRequest = () => action(ActionTypes.LOAD_RELEASES_REQUEST);
 
-  return controllers.git
-    .getReleases()
-    .then((data: GitRelease[]) => dispatch(loadReleaseSuccess(data)))
-    .catch(() => dispatch(loadReleaseFailure()));
-};
+export const loadReleaseSuccess = (data: GitRelease[]) => action(ActionTypes.LOAD_RELEASES_SUCCESS, data);
+
+export const loadReleaseFailure = () => action(ActionTypes.LOAD_RELEASES_FAILURE);

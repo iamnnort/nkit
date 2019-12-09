@@ -1,5 +1,8 @@
 import * as React from 'react';
 import { ReactWrapper, ShallowWrapper } from 'enzyme';
+import { runSaga, Saga } from 'redux-saga';
+
+import { Action } from '../src/common/store/reducer';
 
 const MockComponent: React.FC = (props) => {
   return <>{props.children}</>;
@@ -41,4 +44,17 @@ export function findMock(wrapper: ReactWrapper | ShallowWrapper, componentName: 
   return wrapper.findWhere((element: ReactWrapper | ShallowWrapper) => {
     return element.is(MockComponent) && element.prop('originalComponent') === componentName;
   });
+}
+
+export async function recordSaga(saga: Saga) {
+  const dispatched: Action[] = [];
+
+  await runSaga(
+    {
+      dispatch: (action: Action) => dispatched.push(action),
+    },
+    saga
+  ).toPromise();
+
+  return dispatched;
 }

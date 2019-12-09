@@ -3,24 +3,24 @@ import * as express from 'express';
 import { renderToString } from 'react-dom/server';
 import { Helmet } from 'react-helmet';
 import { StaticRouter, matchPath } from 'react-router-dom';
-import { createStore, applyMiddleware, bindActionCreators } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider as StoreProvider } from 'react-redux';
-import thunk from 'redux-thunk';
+import createSagaMiddleware, { END } from 'redux-saga';
 import { I18nextProvider } from 'react-i18next';
 
 import staticFiles from './middlewares/staticFiles';
 import i18n from './middlewares/i18n';
 
+import config from './config';
 import { Request } from './types';
 import template from './template';
 
 import Root from '../common/pages/Root/Root.container';
 import { ServerStyleSheet, ThemeProvider } from '../common/theme/styled-components';
 import { theme } from '../common/theme/theme';
-import reducer from '../common/store';
+import reducer from '../common/store/reducer';
+import { waitAll } from '../common/store/sagas';
 import routes from '../common/routes';
-
-const PORT = process.env.PORT || 3000;
 
 const server = express();
 
@@ -31,19 +31,22 @@ server.get('*', (req: Request, res: express.Response) => {
   const sheet = new ServerStyleSheet();
   const context = {};
   const initialState = {};
-  const middleware = applyMiddleware(thunk);
+  const sagaMiddleware = createSagaMiddleware();
+  const middleware = applyMiddleware(sagaMiddleware);
   const store = createStore(reducer, initialState, middleware);
-  const serverFetch = routes
-    .filter((route) => matchPath(req.url, route) && route.serverFetch)
-    .map((route) =>
-      Promise.all(
-        bindActionCreators(route.serverFetch, store.dispatch)({
-          match: matchPath(req.url, route),
-        })
-      )
-    );
 
-  Promise.all(serverFetch).then(() => {
+  const preloaders = routes
+    .filter((route) => matchPath(req.url, route) && route.preload)
+    .map((route) =>
+      route.preload({
+        match: matchPath(req.url, route),
+      })
+    )
+    .reduce((preloaders, preloader) => preloaders.concat(preloader), []);
+
+  const runTasks = sagaMiddleware.run(waitAll(preloaders));
+
+  runTasks.toPromise().then(() => {
     const body = renderToString(
       sheet.collectStyles(
         <I18nextProvider i18n={req.i18n}>
@@ -83,6 +86,8 @@ server.get('*', (req: Request, res: express.Response) => {
       })
     );
   });
+
+  store.dispatch(END);
 });
 
-server.listen(PORT, () => console.log(`App listening on http://127.0.0.1:${PORT} [OK]`));
+server.listen(config.port, () => console.log(`App listening on http://127.0.0.1:${config.port} [OK]`));

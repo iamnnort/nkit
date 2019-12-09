@@ -17,7 +17,6 @@
     "test:jest:clean": "jest --clearCache",
     "test:lint:js": "eslint src/ --ext=js --ext=jsx --ext=ts --ext=tsx --fix",
     "test:lint:styled": "stylelint --config=.stylelintrc '**/*.styled.(js|jsx|ts|tsx)'",
-    "test": "run-s test:**",
     "clean": "rm -rf build"
   },
   "path": {
@@ -69,6 +68,7 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.2.0",
+    "eslint-plugin-redux-saga": "^1.1.1",
     "file-loader": "^4.2.0",
     "husky": "^3.0.9",
     "jest": "^24.9.0",
@@ -78,7 +78,6 @@
     "jest-transform-file": "^1.1.1",
     "lint-staged": "^9.4.2",
     "nodemon": "^1.19.4",
-    "npm-run-all": "^4.1.5",
     "path": "^0.12.7",
     "prettier": "^1.18.2",
     "react-test-renderer": "^16.11.0",
@@ -102,6 +101,7 @@
   "dependencies": {
     "@svgr/webpack": "^4.3.3",
     "@types/axios": "^0.14.0",
+    "@types/btoa": "^1.2.3",
     "@types/express": "^4.16.1",
     "@types/react": "^16.8.14",
     "@types/react-dom": "^16.8.4",
@@ -111,9 +111,10 @@
     "@types/react-router-dom": "^4.3.2",
     "@types/redux": "^3.6.0",
     "@types/redux-devtools-extension": "^2.13.2",
-    "@types/redux-thunk": "^2.1.0",
+    "@types/redux-saga": "^0.10.5",
     "@types/styled-components": "^4.1.16",
     "axios": "^0.19.0",
+    "btoa": "^1.2.1",
     "express": "^4.16.4",
     "i18next": "^17.0.4",
     "i18next-browser-languagedetector": "^3.0.1",
@@ -132,7 +133,7 @@
     "react-router-dom": "^5.0.0",
     "redux": "^4.0.4",
     "redux-devtools-extension": "^2.13.8",
-    "redux-thunk": "^2.3.0",
+    "redux-saga": "^1.1.3",
     "styled-components": "^4.3.2",
     "styled-normalize": "^8.0.6",
     "typesafe-actions": "^4.2.0"

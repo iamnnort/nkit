@@ -6,6 +6,7 @@
     "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
   ],
+  "plugins": ["redux-saga"],
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module"

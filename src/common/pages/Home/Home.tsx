@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector, useDispatch } from 'react-redux';
-import { bindActionCreators, Dispatch } from 'redux';
 
 import {
   selectIsReleasesLoaded,
@@ -9,7 +8,8 @@ import {
   selectGetReleasesError,
   selectGetReleases,
 } from '../../store/git/selectors';
-import { loadReleasesAction } from '../../store/git/actions';
+import { loadReleaseRequest } from '../../store/git/actions';
+import { loadReleases } from '../../store/git/sagas';
 
 import {
   Home,
@@ -33,11 +33,9 @@ const HomeComponent: React.FC = () => {
   const releasesError = useSelector(selectGetReleasesError);
   const releases = useSelector(selectGetReleases);
 
-  const loadReleases = React.useCallback(() => bindActionCreators(loadReleasesAction, dispatch), [dispatch]);
-
   React.useEffect(() => {
     if (!isReleasesLoaded) {
-      loadReleases();
+      dispatch(loadReleaseRequest());
     }
   }, []);
 
@@ -65,9 +63,11 @@ const HomeComponent: React.FC = () => {
   );
 };
 
-const serverFetch = () => (dispatch: Dispatch) => [bindActionCreators(loadReleasesAction, dispatch)()];
+const preload = () => {
+  return [loadReleases];
+};
 
 export default {
   component: HomeComponent,
-  serverFetch,
+  preload,
 };
