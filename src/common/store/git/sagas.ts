@@ -13,7 +13,7 @@ export function* loadReleases() {
 }
 
 export function* watchLoadReleases() {
-  yield takeLatest(ActionTypes.LOAD_RELEASES_REQUEST, loadReleases);
+  yield takeLatest(ActionTypes.LOAD_RELEASES_FAILURE, loadReleases);
 }
 
 export default function*() {

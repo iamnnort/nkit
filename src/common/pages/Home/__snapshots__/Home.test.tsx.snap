@@ -259,13 +259,16 @@ exports[`HomeComponent should not regret 1`] = `
                                         "value": "React - Main library",
                                       },
                                       Object {
-                                        "value": "Redux - Global store",
-                                      },
-                                      Object {
                                         "value": "SSR - Server Side Rendering",
                                       },
                                       Object {
                                         "value": "Typescript - Type checking",
+                                      },
+                                      Object {
+                                        "value": "Redux - Global store",
+                                      },
+                                      Object {
+                                        "value": "Redux-Saga - Global store manager",
                                       },
                                       Object {
                                         "value": "i18n - Localisation",
@@ -280,13 +283,16 @@ exports[`HomeComponent should not regret 1`] = `
                                           "value": "React - Main library",
                                         },
                                         Object {
-                                          "value": "Redux - Global store",
-                                        },
-                                        Object {
                                           "value": "SSR - Server Side Rendering",
                                         },
                                         Object {
                                           "value": "Typescript - Type checking",
+                                        },
+                                        Object {
+                                          "value": "Redux - Global store",
+                                        },
+                                        Object {
+                                          "value": "Redux-Saga - Global store manager",
                                         },
                                         Object {
                                           "value": "i18n - Localisation",

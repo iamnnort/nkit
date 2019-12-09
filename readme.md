@@ -6,7 +6,9 @@
 - SSR (Server Side Rendering)
 - Typescript
 - Redux
-  
+- Redux-Saga
+- i18n
+
 ## Installation
 
 ```bash
@@ -16,7 +18,7 @@ cp .env.example .env
 yarn install
 yarn build && yarn build:server
 ```
-  
+
 ## Development
 
 Client Side
@@ -30,7 +32,7 @@ Server Side
 ```bash
 yarn start:server
 ```
-  
+
 ## Production
 
 Without docker

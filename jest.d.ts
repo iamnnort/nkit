@@ -17,5 +17,7 @@ declare namespace NodeJS {
     mockComponent: (componentName: string, componentProps?: {}) => { default: React.FC<{ originalComponent: string }> };
     findMock: (wrapper: any, componentName: string) => any;
     mockEventListeners: (element: any) => any;
+    recordSaga: (saga: any) => any;
+    apiMock: any;
   }
 }
