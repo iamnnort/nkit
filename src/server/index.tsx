@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as express from 'express';
 import { renderToString } from 'react-dom/server';
 import { Helmet } from 'react-helmet';
-import { StaticRouter, matchPath } from 'react-router-dom';
+import { StaticRouter } from 'react-router-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider as StoreProvider } from 'react-redux';
 import createSagaMiddleware, { END } from 'redux-saga';
@@ -20,7 +20,8 @@ import { ServerStyleSheet, ThemeProvider } from '../common/theme/styled-componen
 import { theme } from '../common/theme/theme';
 import reducer from '../common/store/reducer';
 import { waitAll } from '../common/store/sagas';
-import routes from '../common/routes';
+import { routes } from '../common/routes';
+import { matchRoutes } from 'react-router-config';
 
 const server = express();
 
@@ -35,15 +36,10 @@ server.get('*', (req: Request, res: express.Response) => {
   const middleware = applyMiddleware(sagaMiddleware);
   const store = createStore(reducer, initialState, middleware);
 
-  const preloaders = routes
-    .filter((route) => matchPath(req.url, route) && route.preload)
-    .map((route) =>
-      route.preload({
-        match: matchPath(req.url, route),
-      })
-    )
+  const preloaders = matchRoutes(routes, req.url)
+    .filter(({ route }) => route.preload)
+    .map(({ route, match }) => route.preload({ match }))
     .reduce((preloaders, preloader) => preloaders.concat(preloader), []);
-
   const runTasks = sagaMiddleware.run(waitAll(preloaders));
 
   runTasks.toPromise().then(() => {

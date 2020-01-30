@@ -8,7 +8,7 @@ import { GlobalStyle } from './Root.styled';
 import seo from './Root.seo';
 import Header from './Header/Header';
 
-import routes from '../../routes';
+import { routes } from '../../routes';
 
 const RootComponent: React.FC<RouteComponentProps> = () => {
   const { t } = useTranslation();

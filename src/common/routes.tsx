@@ -1,13 +1,9 @@
-import { RouteProps } from 'react-router-dom';
+import { RouteConfig } from 'react-router-config';
 
 import Home from './pages/Home/Home';
 import NotFound from './pages/NotFound/NotFound';
 
-type RouteInterface = RouteProps & {
-  preload?: any;
-};
-
-const routes: RouteInterface[] = [
+export const routes: RouteConfig[] = [
   {
     path: '/',
     exact: true,
@@ -18,5 +14,3 @@ const routes: RouteInterface[] = [
     ...NotFound,
   },
 ];
-
-export default routes;
