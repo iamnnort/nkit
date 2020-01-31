@@ -2,7 +2,7 @@ version: '2.2'
 
 services:
   server:
-    container_name: react-ssr-ts-redux
+    container_name: react-ssr-ts-redux-server
     build:
       context: .
       dockerfile: ./Dockerfile
@@ -11,6 +11,6 @@ services:
       - ./:/var/www/html
       - /var/www/html/node_modules
     ports:
-      - '3000:3000'
+      - '9010:3000'
     restart: always
     command: ['yarn', 'deploy']

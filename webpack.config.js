@@ -3,6 +3,8 @@ const nodeExternals = require('webpack-node-externals');
 const WebpackShellPlugin = require('webpack-shell-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+
 const typescript = require('./webpack/loaders/typescript');
 const javascript = require('./webpack/loaders/javascript');
 const css = require('./webpack/loaders/css');
@@ -42,7 +44,7 @@ const config = function(environment) {
     module: {
       rules: [typescript(), javascript(), image(), fonts(), svg()],
     },
-    plugins: [env()],
+    plugins: [env(), new ForkTsCheckerWebpackPlugin()],
   };
 
   if (isProduction) {
