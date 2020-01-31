@@ -3,11 +3,11 @@ import { Provider as StoreProvider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
 import createSagaMiddleware from 'redux-saga';
 
-import { ThemeProvider } from '../src/common/theme/styled-components';
-import { theme } from '../src/common/theme/theme';
+import { ThemeProvider } from '@common/theme/styled-components';
+import { theme } from '@common/theme/theme';
 
-import { State } from '../src/common/store/reducer';
-import sagas from '../src/common/store/sagas';
+import { State } from '@common/store/reducer';
+import sagas from '@common/store/sagas';
 
 const sagaMiddleware = createSagaMiddleware();
 const middlewares = [sagaMiddleware];

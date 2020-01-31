@@ -9,7 +9,16 @@
     "target": "es5",
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
-    "types": ["jest", "react"]
+    "types": ["jest", "react"],
+    "baseUrl": "./",
+    "paths": {
+      "@test/*": ["test/*"],
+      "@assets/*": ["src/assets/*"],
+      "@client/*": ["src/client/*"],
+      "@common/*": ["src/common/*"],
+      "@server/*": ["src/server/*"],
+      "@locales/*": ["src/locales/*"]
+    }
   },
   "files": [
     "./index.d.ts",

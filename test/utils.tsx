@@ -2,7 +2,7 @@ import * as React from 'react';
 import { ReactWrapper, ShallowWrapper } from 'enzyme';
 import { runSaga, Saga } from 'redux-saga';
 
-import { Action } from '../src/common/store/reducer';
+import { Action } from '@common/store/reducer';
 
 const MockComponent: React.FC = (props) => {
   return <>{props.children}</>;

@@ -29,6 +29,14 @@ const config = function(environment) {
     devtool: isDevelopment ? 'cheap-module-eval-source-map' : 'source-map',
     watch: isDevelopment,
     resolve: {
+      alias: {
+        '@test': path.resolve(process.cwd(), 'test/'),
+        '@assets': path.resolve(process.cwd(), 'src/assets/'),
+        '@client': path.resolve(process.cwd(), 'src/client/'),
+        '@common': path.resolve(process.cwd(), 'src/common/'),
+        '@server': path.resolve(process.cwd(), 'src/server/'),
+        '@locales': path.resolve(process.cwd(), 'src/locales/'),
+      },
       extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
     },
     module: {

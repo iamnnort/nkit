@@ -42,4 +42,13 @@ module.exports = {
   },
 
   snapshotSerializers: ['enzyme-to-json/serializer'],
+
+  moduleNameMapper: {
+    '@test(.*)$': '<rootDir>/test/$1',
+    '@assets(.*)$': '<rootDir>/src/assets/$1',
+    '@client(.*)$': '<rootDir>/src/client/$1',
+    '@common(.*)$': '<rootDir>/src/common/$1',
+    '@server(.*)$': '<rootDir>/src/server/$1',
+    '@locales(.*)$': '<rootDir>/src/locales/$1',
+  },
 };

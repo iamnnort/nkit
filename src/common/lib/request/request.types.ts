@@ -1,4 +1,4 @@
-import { GitRelease } from '../../store/git/types';
+import { GitRelease } from '@common/store/git/types';
 
 export enum RequestType {
   REQUEST_TYPE_DEFAULT = 'REQUEST_TYPE_DEFAULT',

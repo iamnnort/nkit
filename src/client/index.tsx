@@ -5,8 +5,8 @@ import * as ReactDOM from 'react-dom';
 import * as initReactFastclick from 'react-fastclick';
 import { removeUniversalPortals } from 'react-portal-universal';
 
-import { ThemeProvider } from '../common/theme/styled-components';
-import { theme } from '../common/theme/theme';
+import { ThemeProvider } from '@common/theme/styled-components';
+import { theme } from '@common/theme/theme';
 
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
@@ -17,12 +17,12 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { useSSR } from 'react-i18next';
 
-import Root from '../common/pages/Root/Root.container';
-import reducer, { State } from '../common/store/reducer';
-import sagas from '../common/store/sagas';
+import Root from '@common/pages/Root/Root.container';
+import reducer, { State } from '@common/store/reducer';
+import sagas from '@common/store/sagas';
 
-import env from '../common/lib/helpers/env';
-import i18n from '../common/i18n';
+import env from '@common/lib/helpers/env';
+import i18n from '@common/i18n';
 
 declare global {
   interface Window {

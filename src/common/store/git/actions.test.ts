@@ -1,5 +1,5 @@
-import * as actionsCreators from './actions';
-import { ActionTypes } from './types';
+import * as actionsCreators from '@common/store/git/actions';
+import { ActionTypes } from '@common/store/git/types';
 
 describe('git actions creators', () => {
   it(`should create ${ActionTypes.LOAD_RELEASES_REQUEST} action creator`, () => {

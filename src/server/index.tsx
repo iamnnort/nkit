@@ -8,19 +8,19 @@ import { Provider as StoreProvider } from 'react-redux';
 import createSagaMiddleware, { END } from 'redux-saga';
 import { I18nextProvider } from 'react-i18next';
 
-import staticFiles from './middlewares/staticFiles';
-import i18n from './middlewares/i18n';
+import staticFiles from '@server/middlewares/staticFiles';
+import i18n from '@server/middlewares/i18n';
 
-import config from './config';
-import { Request } from './types';
-import template from './template';
+import config from '@server/config';
+import { Request } from '@server/types';
+import template from '@server/template';
 
-import Root from '../common/pages/Root/Root.container';
-import { ServerStyleSheet, ThemeProvider } from '../common/theme/styled-components';
-import { theme } from '../common/theme/theme';
-import reducer from '../common/store/reducer';
-import { waitAll } from '../common/store/sagas';
-import { routes } from '../common/routes';
+import Root from '@common/pages/Root/Root.container';
+import { ServerStyleSheet, ThemeProvider } from '@common/theme/styled-components';
+import { theme } from '@common/theme/theme';
+import reducer from '@common/store/reducer';
+import { waitAll } from '@common/store/sagas';
+import { routes } from '@common/routes';
 import { matchRoutes } from 'react-router-config';
 
 const server = express();

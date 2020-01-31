@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
 
-import LoaderComponent from './Loader';
-import { ComponentProps } from './Loader.types';
-import { LoaderError, LoaderSpin } from './Loader.styled';
+import LoaderComponent from '@common/components/Loader/Loader';
+import { ComponentProps } from '@common/components/Loader/Loader.types';
+import { LoaderError, LoaderSpin } from '@common/components/Loader/Loader.styled';
 
 describe('LoaderComponent', () => {
   let wrapper: ReactWrapper;

@@ -1,6 +1,6 @@
 import { withRouter } from 'react-router';
 
-import RootComponent from './Root';
+import RootComponent from '@common/pages/Root/Root';
 
 const Root = withRouter(RootComponent);
 

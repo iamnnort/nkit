@@ -4,11 +4,11 @@ import { RouteComponentProps } from 'react-router';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 
-import { GlobalStyle } from './Root.styled';
-import seo from './Root.seo';
-import Header from './Header/Header';
+import { GlobalStyle } from '@common/pages/Root/Root.styled';
+import seo from '@common/pages/Root/Root.seo';
+import Header from '@common/pages/Root/Header/Header';
 
-import { routes } from '../../routes';
+import { routes } from '@common/routes';
 
 const RootComponent: React.FC<RouteComponentProps> = () => {
   const { t } = useTranslation();

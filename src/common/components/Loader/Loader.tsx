@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { ComponentProps } from './Loader.types';
-import { LoaderSpin, LoaderError } from './Loader.styled';
+import { ComponentProps } from '@common/components/Loader/Loader.types';
+import { LoaderSpin, LoaderError } from '@common/components/Loader/Loader.styled';
 
 const LoaderComponent: React.FC<ComponentProps> = ({ isLoading, isInitialLoaded, error, render }) => {
   const Content = isInitialLoaded && render();

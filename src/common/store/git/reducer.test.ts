@@ -1,7 +1,7 @@
 import { reducer, initialState } from './reducer';
-import { ActionTypes } from './types';
-import { loadReleaseRequest, loadReleaseSuccess, loadReleaseFailure } from './actions';
-import { CommonError } from '../../lib/store/types';
+import { ActionTypes } from '@common/store/git/types';
+import { loadReleaseRequest, loadReleaseSuccess, loadReleaseFailure } from '@common/store/git/actions';
+import { CommonError } from '@common/lib/store/types';
 
 describe('git reducer', () => {
   it(`should handle ${ActionTypes.LOAD_RELEASES_REQUEST} action`, () => {

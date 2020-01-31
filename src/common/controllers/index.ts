@@ -1,4 +1,4 @@
-import git from './git';
+import git from '@common/controllers/git';
 
 export default {
   git,

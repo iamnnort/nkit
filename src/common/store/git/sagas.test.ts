@@ -1,6 +1,6 @@
-import { loadReleaseSuccess, loadReleaseFailure } from './actions';
-import { ActionTypes } from './types';
-import { loadReleases } from './sagas';
+import { loadReleaseSuccess, loadReleaseFailure } from '@common/store/git/actions';
+import { ActionTypes } from '@common/store/git/types';
+import { loadReleases } from '@common/store/git/sagas';
 
 describe('git sagas', () => {
   it(`should dispatch ${ActionTypes.LOAD_RELEASES_SUCCESS} if git releases fetching is succeed`, async () => {

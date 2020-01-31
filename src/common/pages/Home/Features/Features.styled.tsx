@@ -1,4 +1,4 @@
-import styled, { icon } from '../../../theme/styled-components';
+import styled, { icon } from '@common/theme/styled-components';
 
 export const Features = styled.section``;
 

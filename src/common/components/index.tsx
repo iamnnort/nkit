@@ -1,4 +1,4 @@
-import Icon from './Icon/Icon';
-import Loader from './Loader/Loader';
+import Icon from '@common/components/Icon/Icon';
+import Loader from '@common/components/Loader/Loader';
 
 export { Icon, Loader };

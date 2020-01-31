@@ -1,6 +1,7 @@
 import { HelmetData } from 'react-helmet';
 import { appendUniversalPortals } from 'react-portal-universal/lib/server';
-import { State } from '../common/store/reducer';
+
+import { State } from '@common/store/reducer';
 
 const template = ({
   body,

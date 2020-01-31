@@ -1,6 +1,7 @@
 import * as styledComponents from 'styled-components';
 import { ServerStyleSheet, ThemedStyledComponentsModule } from 'styled-components';
-import { ThemeInterface } from './theme';
+
+import { ThemeInterface } from '@common/theme/theme';
 
 const {
   default: styled,
@@ -56,7 +57,7 @@ const fontFace = (
 
   const includes = exts
     .map((ext) => {
-      const url = `url(${require(`../../assets/fonts/${src}.${ext}`)})`;
+      const url = `url(${require(`@assets/fonts/${src}.${ext}`)})`;
       const format = formats[ext] ? `format("${formats[ext]}")` : '';
 
       return `${url} ${format}`;

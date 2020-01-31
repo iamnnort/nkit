@@ -2,8 +2,8 @@ import * as React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
 
 import HomeComponent from './Home';
-import { TestProvider } from '../../../../test';
-import * as gitActions from '../../store/git/actions';
+import { TestProvider } from '@test/index';
+import * as gitActions from '@common/store/git/actions';
 
 jest.mock('./Releases/Releases', () => global.mockComponent('Releases'));
 jest.mock('./Features/Features', () => global.mockComponent('Features'));

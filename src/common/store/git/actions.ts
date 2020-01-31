@@ -1,5 +1,5 @@
 import { action } from 'typesafe-actions';
-import { ActionTypes, GitRelease } from './types';
+import { ActionTypes, GitRelease } from '@common/store/git/types';
 
 export const loadReleaseRequest = () => action(ActionTypes.LOAD_RELEASES_REQUEST);
 

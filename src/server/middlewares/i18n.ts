@@ -1,6 +1,8 @@
 import * as express from 'express';
 import i18nextMiddleware from 'i18next-express-middleware';
-import { i18nOptions } from '../../common/i18n';
+
+import { i18nOptions } from '@common/i18n';
+
 const i18next = require('i18next');
 
 i18next.use(i18nextMiddleware.LanguageDetector).init(i18nOptions);

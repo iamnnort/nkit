@@ -1,6 +1,6 @@
 import styledNormalize from 'styled-normalize';
-import fonts from '../../theme/fonts';
-import { createGlobalStyle } from '../../theme/styled-components';
+import fonts from '@common/theme/fonts';
+import { createGlobalStyle } from '@common/theme/styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   ${fonts};
@@ -19,7 +19,7 @@ export const GlobalStyle = createGlobalStyle`
 
     font-size: ${(props) => props.theme.textFontSize};
     font-family: ${(props) => props.theme.textFontFamily};
-    background-image: url("${require('../../../assets/images/ocean.jpeg')}");
+    background-image: url("${require('@assets/images/ocean.jpeg')}");
     background-size: cover;
   }
 

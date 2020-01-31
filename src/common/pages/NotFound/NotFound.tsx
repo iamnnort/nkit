@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 
-import { NotFound, NotFoundTitle } from './NotFound.styled';
+import { NotFound, NotFoundTitle } from '@common/pages/NotFound/NotFound.styled';
 
 const NotFoundComponent: React.FC = () => {
   const { t } = useTranslation();

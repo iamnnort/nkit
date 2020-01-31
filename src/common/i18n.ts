@@ -2,9 +2,9 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import languageDetector from 'i18next-browser-languagedetector';
 
-import locales from '../locales';
-import env from './lib/helpers/env';
-import config from './config';
+import locales from '@locales/index';
+import env from '@common/lib/helpers/env';
+import config from '@common/config';
 
 export const i18nOptions = {
   debug: env.isDevelopment(),

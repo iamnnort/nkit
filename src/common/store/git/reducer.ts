@@ -1,9 +1,9 @@
 import { Reducer } from 'redux';
 import { ActionType } from 'typesafe-actions';
-import * as actionsCreators from './actions';
-import { ActionTypes, Git } from './types';
-import { commonInitialState } from '../../lib/store/reducer';
-import { CommonError } from '../../lib/store/types';
+import * as actionsCreators from '@common/store/git/actions';
+import { ActionTypes, Git } from '@common/store/git/types';
+import { commonInitialState } from '@common/lib/store/reducer';
+import { CommonError } from '@common/lib/store/types';
 
 export type State = Git;
 export type Action = ActionType<typeof actionsCreators>;

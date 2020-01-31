@@ -1,4 +1,4 @@
-import { GitRelease } from '../../../store/git/types';
+import { GitRelease } from '@common/store/git/types';
 
 export interface ComponentProps {
   releases: GitRelease[];

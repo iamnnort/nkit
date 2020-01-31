@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { LangSwitcher, LangSwitcherItem } from './LangSwitcher.styled';
-import config from '../../../../config';
+import { LangSwitcher, LangSwitcherItem } from '@common/pages/Root/Header/LangSwitcher/LangSwitcher.styled';
+import config from '@common/config';
 
 const LangSwitcherComponent = () => {
   const { i18n } = useTranslation();

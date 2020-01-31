@@ -2,8 +2,8 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { mount, ReactWrapper } from 'enzyme';
 
-import NotFoundComponent from './NotFound';
-import { NotFoundTitle } from './NotFound.styled';
+import NotFoundComponent from '@common/pages/NotFound/NotFound';
+import { NotFoundTitle } from '@common/pages/NotFound/NotFound.styled';
 
 describe('NotFoundComponent', () => {
   let wrapper: ReactWrapper;

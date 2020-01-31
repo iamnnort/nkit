@@ -1,6 +1,6 @@
 import { combineReducers, Reducer } from 'redux';
 
-import { reducer as gitReducer, State as gitState, Action as gitAction } from './git/reducer';
+import { reducer as gitReducer, State as gitState, Action as gitAction } from '@common/store/git/reducer';
 
 export interface State {
   git: gitState;

@@ -1,4 +1,4 @@
-import styled from '../../../../theme/styled-components';
+import styled from '@common/theme/styled-components';
 
 export const LangSwitcher = styled.div`
   display: flex;

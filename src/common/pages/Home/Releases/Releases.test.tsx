@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
 
-import ReleasesComponent from './Releases';
-import { ComponentProps } from './Releases.types';
+import ReleasesComponent from '@common/pages/Home/Releases/Releases';
+import { ComponentProps } from '@common/pages/Home/Releases/Releases.types';
 
 jest.mock('../../../components/Icon/Icon', () => global.mockComponent('Icon'));
 

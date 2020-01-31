@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
 
-import LangSwitcherComponent from './LangSwitcher';
-import { LangSwitcherItem } from './LangSwitcher.styled';
+import LangSwitcherComponent from '@common/pages/Root/Header/LangSwitcher/LangSwitcher';
+import { LangSwitcherItem } from '@common/pages/Root/Header/LangSwitcher/LangSwitcher.styled';
 
 describe('LangSwitcherComponent', () => {
   let wrapper: ReactWrapper;

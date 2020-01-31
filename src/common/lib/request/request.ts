@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig, AxiosResponse, AxiosError } from 'axios';
 
-import { RequestType, SuccessResponse } from './request.types';
-import config from '../../config';
+import { RequestType, SuccessResponse } from '@common/lib/request/request.types';
+import config from '@common/config';
 
 export function request(options: AxiosRequestConfig, requestType: RequestType = RequestType.REQUEST_TYPE_DEFAULT) {
   const onSuccess = (response: AxiosResponse<SuccessResponse>) => {

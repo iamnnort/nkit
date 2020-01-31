@@ -1,9 +1,15 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Releases, ReleasesTitle, ReleasesList, ReleasesListItem, ReleasesListItemLink } from './Releases.styled';
-import { ComponentProps } from './Releases.types';
-import { Icon } from '../../../components';
+import {
+  Releases,
+  ReleasesTitle,
+  ReleasesList,
+  ReleasesListItem,
+  ReleasesListItemLink,
+} from '@common/pages/Home/Releases/Releases.styled';
+import { ComponentProps } from '@common/pages/Home/Releases/Releases.types';
+import { Icon } from '@common/components';
 
 const ReleasesComponent: React.FC<ComponentProps> = ({ releases }) => {
   const { t } = useTranslation();

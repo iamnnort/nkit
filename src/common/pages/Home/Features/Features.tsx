@@ -1,9 +1,15 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Features, FeaturesSearch, FeaturesTitle, FeaturesList, FeaturesListItem } from './Features.styled';
-import { ComponentProps } from './Features.types';
-import { Icon } from '../../../components';
+import {
+  Features,
+  FeaturesSearch,
+  FeaturesTitle,
+  FeaturesList,
+  FeaturesListItem,
+} from '@common/pages/Home/Features/Features.styled';
+import { ComponentProps } from '@common/pages/Home/Features/Features.types';
+import { Icon } from '@common/components';
 
 const FeaturesComponent: React.FC<ComponentProps> = ({ features }) => {
   const { t } = useTranslation();

@@ -1,4 +1,4 @@
-import { CommonStore } from '../../lib/store/types';
+import { CommonStore } from '@common/lib/store/types';
 
 export enum ActionTypes {
   LOAD_RELEASES_REQUEST = '@@git/LOAD_RELEASES_REQUEST',

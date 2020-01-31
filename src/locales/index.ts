@@ -1,6 +1,6 @@
-import enGb from './enGb';
-import ruRu from './ruRu';
-import config from '../common/config';
+import enGb from '@locales/enGb';
+import ruRu from '@locales/ruRu';
+import config from '@common/config';
 
 const locales = {
   [config.languages.enGb.short]: enGb,

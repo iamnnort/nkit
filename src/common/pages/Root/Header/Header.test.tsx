@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
 
-import HeaderComponent from './Header';
+import HeaderComponent from '@common/pages/Root/Header/Header';
 
 jest.mock('./LangSwitcher/LangSwitcher', () => global.mockComponent('LangSwitcher'));
 

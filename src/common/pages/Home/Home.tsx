@@ -7,9 +7,9 @@ import {
   selectIsReleasesLoading,
   selectGetReleasesError,
   selectGetReleases,
-} from '../../store/git/selectors';
-import { loadReleaseRequest } from '../../store/git/actions';
-import { loadReleases } from '../../store/git/sagas';
+} from '@common/store/git/selectors';
+import { loadReleaseRequest } from '@common/store/git/actions';
+import { loadReleases } from '@common/store/git/sagas';
 
 import {
   Home,
@@ -18,11 +18,11 @@ import {
   WhitePapperTitle,
   WhitePapperFeatures,
   WhitePapperReleases,
-} from './Home.styled';
-import config from './Home.config';
-import Releases from './Releases/Releases';
-import Features from './Features/Features';
-import { Loader } from '../../components';
+} from '@common/pages/Home/Home.styled';
+import config from '@common/pages/Home/Home.config';
+import Releases from '@common/pages/Home/Releases/Releases';
+import Features from '@common/pages/Home/Features/Features';
+import { Loader } from '@common/components';
 
 const HomeComponent: React.FC = () => {
   const { t } = useTranslation();

@@ -1,5 +1,6 @@
 import { fork, all } from 'redux-saga/effects';
-import gitSagas from './git/sagas';
+
+import gitSagas from '@common/store/git/sagas';
 
 export function waitAll(sagas: any[]) {
   return function*() {

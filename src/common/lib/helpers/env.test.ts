@@ -1,4 +1,4 @@
-import env from './env';
+import env from '@common/lib/helpers/env';
 
 describe('env', () => {
   const helpers = {

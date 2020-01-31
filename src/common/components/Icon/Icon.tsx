@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-import { Icons, ComponentProps } from './Icon.types';
+import { Icons, ComponentProps } from '@common/components/Icon/Icon.types';
 
-import { ReactComponent as CheckMark } from './__svg__/CheckMark.svg';
-import { ReactComponent as Tag } from './__svg__/Tag.svg';
+import { ReactComponent as CheckMark } from '@common/components/Icon/__svg__/CheckMark.svg';
+import { ReactComponent as Tag } from '@common/components/Icon/__svg__/Tag.svg';
 
 const icons: Icons = {
   checkMark: { default: <CheckMark /> },

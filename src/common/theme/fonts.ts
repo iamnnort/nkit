@@ -1,4 +1,4 @@
-import { fontFace } from './styled-components';
+import { fontFace } from '@common/theme/styled-components';
 
 const fonts = `
   ${fontFace('Roboto', 'Roboto/Roboto-Bold', 'bold')};

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
 
-import Icon from './Icon';
-import { ComponentProps } from './Icon.types';
+import Icon from '@common/components/Icon/Icon';
+import { ComponentProps } from '@common/components/Icon/Icon.types';
 
 describe('IconComponent', () => {
   let wrapper: ReactWrapper;

@@ -1,5 +1,5 @@
-import { gitRequest } from '../lib/request/request';
-import config from '../config';
+import { gitRequest } from '@common/lib/request/request';
+import config from '@common/config';
 
 function getReleases() {
   return gitRequest({

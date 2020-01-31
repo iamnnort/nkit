@@ -2,7 +2,7 @@ import 'jest-styled-components';
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
 
-import { mockComponent, mockEventListeners, findMock, recordSaga } from './utils';
+import { mockComponent, mockEventListeners, findMock, recordSaga } from '@test/utils';
 
 const apiMock = new MockAdapter(axios);
 
