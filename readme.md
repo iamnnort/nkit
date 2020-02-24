@@ -21,6 +21,8 @@ yarn build && yarn build:server
 
 ## Development
 
+Without Docker
+
 Client Side
 
 ```bash
@@ -33,19 +35,26 @@ Server Side
 yarn start:server
 ```
 
+With Docker
+
+```bash
+docker-compose build
+docker-compose up -d
+```
+
 ## Production
 
-Without docker
+Without Docker
 
 ```bash
 yarn deploy
 ```
 
-With docker
+With Docker
 
 ```bash
-docker-compose build
-docker-compose up -d
+docker build -f dockerfile.prod -t nkit .
+docker run -p 9010:3000 --name nkit -d nkit
 ```
 
 ## Contributing
