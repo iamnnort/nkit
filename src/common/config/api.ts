@@ -19,7 +19,7 @@ const config = {
     // API endpoints here
   },
 
-  gitUrl: 'https://api.github.com/repos/nikitapavets/react-ssr-ts-redux',
+  gitUrl: 'https://api.github.com/repos/nikitapavets/nkit',
   gitEndPoints: {
     getReleases: () => '/releases',
   },

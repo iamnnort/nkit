@@ -30,7 +30,7 @@ const template = ({
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="all" />
     <meta name="author" content="Nikita Pavets" />
-    <meta name="copyright" lang="en" content="react-ssr-ts-redux" />
+    <meta name="copyright" lang="en" content="nkit" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
@@ -41,11 +41,11 @@ const template = ({
     <meta name="theme-color" content="#ffffff" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="react-ssr-ts-redux.com" />
+    <meta property="og:site_name" content="nkit.com" />
     <meta property="og:locale" content="en_US" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@react-ssr-ts-redux" />
+    <meta name="twitter:site" content="@nkit" />
     <meta name="twitter:creator" content="@nikitapavets" />
 
     ${helmet.title.toString()}

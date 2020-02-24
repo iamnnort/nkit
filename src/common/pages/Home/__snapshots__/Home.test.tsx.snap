@@ -39,7 +39,7 @@ exports[`HomeComponent should not regret 1`] = `
         "isLoading": false,
         "releases": Array [
           Object {
-            "html_url": "https://github.com/nikitapavets/react-ssr-ts-redux/releases/tag/v1",
+            "html_url": "https://github.com/nikitapavets/nkit/releases/tag/v1",
             "id": 1,
             "name": "Release v1",
             "tag_name": "v1",
@@ -348,7 +348,7 @@ exports[`HomeComponent should not regret 1`] = `
                                     releases={
                                       Array [
                                         Object {
-                                          "html_url": "https://github.com/nikitapavets/react-ssr-ts-redux/releases/tag/v1",
+                                          "html_url": "https://github.com/nikitapavets/nkit/releases/tag/v1",
                                           "id": 1,
                                           "name": "Release v1",
                                           "tag_name": "v1",
@@ -361,7 +361,7 @@ exports[`HomeComponent should not regret 1`] = `
                                       releases={
                                         Array [
                                           Object {
-                                            "html_url": "https://github.com/nikitapavets/react-ssr-ts-redux/releases/tag/v1",
+                                            "html_url": "https://github.com/nikitapavets/nkit/releases/tag/v1",
                                             "id": 1,
                                             "name": "Release v1",
                                             "tag_name": "v1",

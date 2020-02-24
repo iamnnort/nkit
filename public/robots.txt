@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /checkout
-Sitemap: https://react-ssr-ts-redux.com/sitemap.xml
+Sitemap: https://nkit.com/sitemap.xml

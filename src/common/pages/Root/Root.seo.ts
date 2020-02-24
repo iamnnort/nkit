@@ -18,7 +18,7 @@ const seo = (t: i18next.TFunction) => ({
     },
     {
       property: 'og:url',
-      content: `https://github.com/nikitapavets/react-ssr-ts-redux`,
+      content: `https://github.com/nikitapavets/nkit`,
     },
     {
       property: 'og:image',
@@ -34,7 +34,7 @@ const seo = (t: i18next.TFunction) => ({
     },
     {
       name: 'twitter:url',
-      content: `https://github.com/nikitapavets/react-ssr-ts-redux`,
+      content: `https://github.com/nikitapavets/nkit`,
     },
     {
       name: 'twitter:image',

@@ -12,8 +12,8 @@
 ## Installation
 
 ```bash
-git clone https://github.com/nikitapavets/react-ssr-ts-redux
-cd react-ssr-ts-redux
+git clone https://github.com/nikitapavets/nkit
+cd nkit
 cp .env.example .env
 yarn install
 yarn build && yarn build:server

@@ -1,5 +1,5 @@
 {
-  "name": "@nikitapavets/react-ssr-ts-redux",
+  "name": "@nikitapavets/nkit",
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
@@ -27,15 +27,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nikitapavets/react-ssr-ts-redux.git"
+    "url": "git+https://github.com/nikitapavets/nkit.git"
   },
   "keywords": [],
   "author": "Nikita Pavets (nikitapavets@gmail.com)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nikitapavets/react-ssr-ts-redux/issues"
+    "url": "https://github.com/nikitapavets/nkit/issues"
   },
-  "homepage": "https://github.com/nikitapavets/react-ssr-ts-redux#readme",
+  "homepage": "https://github.com/nikitapavets/nkit#readme",
   "devDependencies": {
     "@babel/core": "^7.7.0",
     "@babel/preset-env": "^7.7.0",
