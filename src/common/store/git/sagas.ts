@@ -14,7 +14,7 @@ export function* loadReleases() {
 }
 
 export function* watchLoadReleases() {
-  yield takeLatest(ActionTypes.LOAD_RELEASES_FAILURE, loadReleases);
+  yield takeLatest(ActionTypes.LOAD_RELEASES_REQUEST, loadReleases);
 }
 
 export default function*() {

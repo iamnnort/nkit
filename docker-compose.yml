@@ -2,10 +2,10 @@ version: '2.2'
 
 services:
   server:
-    container_name: react-ssr-ts-redux-server
+    container_name: nkit-server
     build:
       context: .
-      dockerfile: ./Dockerfile
+      dockerfile: ./dockerfile.dev
     working_dir: /var/www/html
     volumes:
       - ./:/var/www/html
@@ -13,4 +13,4 @@ services:
     ports:
       - '9010:3000'
     restart: always
-    command: ['yarn', 'deploy']
+    command: ['yarn', 'deploy:dev']
