@@ -1,4 +1,4 @@
-import general from '@locales/enGb/general';
+import general from './general';
 
 const translations = {
   general,

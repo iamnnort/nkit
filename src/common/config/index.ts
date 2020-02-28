@@ -1,5 +1,5 @@
-import api from '@common/config/api';
-import languages from '@common/config/languages';
+import api from './api';
+import languages from './languages';
 
 export default {
   api,

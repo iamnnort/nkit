@@ -16,23 +16,14 @@ git clone https://github.com/nikitapavets/nkit
 cd nkit
 cp .env.example .env
 yarn install
-yarn build && yarn build:server
 ```
 
 ## Development
 
 Without Docker
 
-Client Side
-
 ```bash
-yarn start
-```
-
-Server Side
-
-```bash
-yarn start:server
+yarn deploy:dev
 ```
 
 With Docker
@@ -47,7 +38,7 @@ docker-compose up -d
 Without Docker
 
 ```bash
-yarn deploy
+yarn deploy:prod
 ```
 
 With Docker

@@ -2,12 +2,11 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import languageDetector from 'i18next-browser-languagedetector';
 
-import locales from '@locales/index';
-import env from '@common/lib/helpers/env';
-import config from '@common/config';
+import locales from '../locales/index';
+import config from './config';
 
 export const i18nOptions = {
-  debug: env.isDevelopment(),
+  debug: false,
   preload: [config.languages.enGb.short, config.languages.ruRu.short],
   fallbackLng: config.languages.enGb.short,
   resources: locales,
