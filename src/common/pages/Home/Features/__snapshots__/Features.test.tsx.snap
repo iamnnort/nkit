@@ -51,7 +51,7 @@ exports[`FeaturesComponent should not regret 1`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "bDWFJH",
             "rules": Array [],
           },

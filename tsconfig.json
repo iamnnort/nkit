@@ -9,7 +9,10 @@
     "target": "es5",
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "types": ["jest", "react"],
+    "typeRoots": ["./@types", "./node_modules/@types"],
     "baseUrl": "./",
     "paths": {
       "@test/*": ["test/*"],
@@ -20,16 +23,7 @@
       "@locales/*": ["src/locales/*"]
     }
   },
-  "files": [
-    "./index.d.ts",
-    "./images.d.ts",
-    "./fonts.d.ts",
-    "./jest.d.ts"
-  ],
+  "files": ["./index.d.ts", "./images.d.ts", "./fonts.d.ts", "./jest.d.ts"],
   "include": ["src/**/*"],
-  "exclude": [
-    "node_modules",
-    "**/__tests__/**/*.(ts|tsx|js|jsx)",
-    "**/?(*.)+(spec|test).(ts|tsx|js|jsx)"
-  ]
+  "exclude": ["node_modules", "**/__tests__/**/*.(ts|tsx|js|jsx)", "**/?(*.)+(spec|test).(ts|tsx|js|jsx)"]
 }

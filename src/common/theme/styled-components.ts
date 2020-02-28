@@ -19,18 +19,15 @@ const sizes = {
   xlarge: 1921,
 };
 
-const media = (Object.keys(sizes) as (keyof typeof sizes)[]).reduce(
-  (acc, label) => {
-    acc[label] = (first: any, ...interpolations: any[]) => css`
-      @media (min-width: ${sizes[label]}px) {
-        ${css(first, ...interpolations)}
-      }
-    `;
+const media = (Object.keys(sizes) as (keyof typeof sizes)[]).reduce((acc, label) => {
+  acc[label] = (first: any, ...interpolations: any[]) => css`
+    @media (min-width: ${sizes[label]}px) {
+      ${css(first, ...interpolations)}
+    }
+  `;
 
-    return acc;
-  },
-  {} as { [key in keyof typeof sizes]: styledComponents.ThemedCssFunction<ThemeInterface> }
-);
+  return acc;
+}, {} as { [key in keyof typeof sizes]: styledComponents.ThemedCssFunction<ThemeInterface> });
 
 enum FontFaceExts {
   eot = 'eot',

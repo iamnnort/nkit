@@ -1,5 +1,7 @@
 import * as React from 'react';
 import * as express from 'express';
+import * as compression from 'compression';
+
 import { renderToString } from 'react-dom/server';
 import { Helmet } from 'react-helmet';
 import { StaticRouter } from 'react-router-dom';
@@ -7,6 +9,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider as StoreProvider } from 'react-redux';
 import createSagaMiddleware, { END } from 'redux-saga';
 import { I18nextProvider } from 'react-i18next';
+import { matchRoutes } from 'react-router-config';
 
 import staticFiles from '@server/middlewares/staticFiles';
 import i18n from '@server/middlewares/i18n';
@@ -18,12 +21,16 @@ import template from '@server/template';
 import Root from '@common/pages/Root/Root.container';
 import { ServerStyleSheet, ThemeProvider } from '@common/theme/styled-components';
 import { theme } from '@common/theme/theme';
-import reducer from '@common/store/reducer';
+import reducer, { initialState } from '@common/store/reducer';
 import { waitAll } from '@common/store/sagas';
 import { routes } from '@common/routes';
-import { matchRoutes } from 'react-router-config';
+import env from '@common/lib/helpers/env';
 
 const server = express();
+
+if (env.isProduction()) {
+  server.use(compression());
+}
 
 server.use(staticFiles);
 server.use(i18n);
@@ -31,7 +38,6 @@ server.use(i18n);
 server.get('*', (req: Request, res: express.Response) => {
   const sheet = new ServerStyleSheet();
   const context = {};
-  const initialState = {};
   const sagaMiddleware = createSagaMiddleware();
   const middleware = applyMiddleware(sagaMiddleware);
   const store = createStore(reducer, initialState, middleware);
