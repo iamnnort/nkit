@@ -1,4 +1,4 @@
-import general from '@locales/ruRu/general';
+import general from './general';
 
 const translations = {
   general,

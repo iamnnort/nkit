@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { renderRoutes } from 'react-router-config';
 import { RouteComponentProps } from 'react-router';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 
 import { GlobalStyle } from '@common/pages/Root/Root.styled';

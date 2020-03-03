@@ -41,7 +41,7 @@ module.exports = {
     '^.+\\.(jpg|jpeg|png|gif|webp)$': 'jest-transform-file',
   },
 
-  snapshotSerializers: ['enzyme-to-json/serializer'],
+  snapshotSerializers: ['enzyme-to-json/serializer', 'jest-serializer-react-helmet-async'],
 
   moduleNameMapper: {
     '@test(.*)$': '<rootDir>/test/$1',
