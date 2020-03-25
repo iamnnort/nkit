@@ -19,6 +19,7 @@ import { theme } from '@common/theme/theme';
 import reducer, { initialState } from '@common/store/reducer';
 import { waitAll } from '@common/store/sagas';
 import { routes } from '@common/routes';
+import { getPathName, getLocationSearch } from '@common/lib/helpers/strings';
 
 export default () => (req: Request, res: express.Response) => {
   const sheet = new ServerStyleSheet();
@@ -28,9 +29,17 @@ export default () => (req: Request, res: express.Response) => {
   const middleware = applyMiddleware(sagaMiddleware);
   const store = createStore(reducer, initialState, middleware);
 
-  const preloaders = matchRoutes(routes, req.url)
+  const preloaders = matchRoutes(routes, getPathName(req.url))
     .filter(({ route }) => route.preload)
-    .map(({ route, match }) => route.preload({ match }))
+    .map(({ route, match }) =>
+      route.preload({
+        match,
+        location: {
+          search: getLocationSearch(req.url),
+        },
+        dispatch: store.dispatch,
+      })
+    )
     .reduce((preloaders, preloader) => preloaders.concat(preloader), []);
   const runTasks = sagaMiddleware.run(waitAll(preloaders));
 
