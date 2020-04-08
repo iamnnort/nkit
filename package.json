@@ -155,7 +155,7 @@
       "git add ."
     ],
     "src/**/*.styled.*": [
-      "stylelint --config=.stylelintrc --fix",
+      "stylelint --config=.stylelintrc",
       "prettier --config .prettierrc --write",
       "git add ."
     ]
