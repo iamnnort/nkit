@@ -15,50 +15,15 @@ exports[`HeaderComponent should not regret 1`] = `
 
 <HeaderComponent>
   <styled.header>
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "
-  display: flex;
-  justify-content: flex-end;
-
-  padding: 15px;
-
-  background: ",
-              [Function],
-              ";
-",
-            ],
-          },
-          "displayName": "styled.header",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
-          "target": "header",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <header
+      className="c0"
     >
-      <header
-        className="c0"
-      >
-        <default>
-          <MockComponent
-            originalComponent="LangSwitcher"
-          />
-        </default>
-      </header>
-    </StyledComponent>
+      <default>
+        <MockComponent
+          originalComponent="LangSwitcher"
+        />
+      </default>
+    </header>
   </styled.header>
 </HeaderComponent>
 `;

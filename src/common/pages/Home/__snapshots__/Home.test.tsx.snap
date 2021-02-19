@@ -61,7 +61,7 @@ exports[`HomeComponent should not regret 1`] = `
       }
     }
   >
-    <ThemeProvider
+    <Component
       theme={
         Object {
           "brandColor": "#6B71D9",
@@ -97,311 +97,128 @@ exports[`HomeComponent should not regret 1`] = `
       >
         <HomeComponent>
           <styled.section>
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-bdVaJa",
-                    "isStatic": false,
-                    "lastClassName": "bDWFJH",
-                    "rules": Array [],
-                  },
-                  "displayName": "styled.section",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "sc-bdVaJa",
-                  "target": "section",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
+            <section
+              className=""
             >
-              <section
-                className=""
-              >
-                <styled.div>
-                  <StyledComponent
-                    forwardedComponent={
-                      Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "attrs": Array [],
-                        "componentStyle": ComponentStyle {
-                          "componentId": "sc-bwzfXH",
-                          "isStatic": false,
-                          "lastClassName": "c0",
-                          "rules": Array [
-                            "
-  margin-top: 100px;
-
-  display: flex;
-",
-                          ],
-                        },
-                        "displayName": "styled.div",
-                        "foldedComponentIds": Array [],
-                        "render": [Function],
-                        "styledComponentId": "sc-bwzfXH",
-                        "target": "div",
-                        "toString": [Function],
-                        "warnTooManyClasses": [Function],
-                        "withComponent": [Function],
-                      }
-                    }
-                    forwardedRef={null}
-                  >
+              <styled.div>
+                <div
+                  className="c0"
+                >
+                  <styled.div>
                     <div
-                      className="c0"
+                      className="c1"
                     >
                       <styled.div>
-                        <StyledComponent
-                          forwardedComponent={
-                            Object {
-                              "$$typeof": Symbol(react.forward_ref),
-                              "attrs": Array [],
-                              "componentStyle": ComponentStyle {
-                                "componentId": "sc-htpNat",
-                                "isStatic": false,
-                                "lastClassName": "c1",
-                                "rules": Array [
-                                  "
-  max-width: 500px;
-
-  margin: auto;
-  padding: ",
-                                  [Function],
-                                  ";
-
-  background: ",
-                                  [Function],
-                                  ";
-",
-                                ],
-                              },
-                              "displayName": "styled.div",
-                              "foldedComponentIds": Array [],
-                              "render": [Function],
-                              "styledComponentId": "sc-htpNat",
-                              "target": "div",
-                              "toString": [Function],
-                              "warnTooManyClasses": [Function],
-                              "withComponent": [Function],
-                            }
-                          }
-                          forwardedRef={null}
+                        <div
+                          className="c2"
                         >
-                          <div
-                            className="c1"
-                          >
-                            <styled.div>
-                              <StyledComponent
-                                forwardedComponent={
-                                  Object {
-                                    "$$typeof": Symbol(react.forward_ref),
-                                    "attrs": Array [],
-                                    "componentStyle": ComponentStyle {
-                                      "componentId": "sc-bxivhb",
-                                      "isStatic": false,
-                                      "lastClassName": "c2",
-                                      "rules": Array [
-                                        "
-  font-size: ",
-                                        [Function],
-                                        ";
-  font-weight: bold;
-  text-align: center;
-",
-                                      ],
-                                    },
-                                    "displayName": "styled.div",
-                                    "foldedComponentIds": Array [],
-                                    "render": [Function],
-                                    "styledComponentId": "sc-bxivhb",
-                                    "target": "div",
-                                    "toString": [Function],
-                                    "warnTooManyClasses": [Function],
-                                    "withComponent": [Function],
-                                  }
-                                }
-                                forwardedRef={null}
-                              >
-                                <div
-                                  className="c2"
-                                >
-                                  general:appTitle
-                                </div>
-                              </StyledComponent>
-                            </styled.div>
-                            <styled.div>
-                              <StyledComponent
-                                forwardedComponent={
-                                  Object {
-                                    "$$typeof": Symbol(react.forward_ref),
-                                    "attrs": Array [],
-                                    "componentStyle": ComponentStyle {
-                                      "componentId": "sc-ifAKCX",
-                                      "isStatic": false,
-                                      "lastClassName": "c3",
-                                      "rules": Array [
-                                        "
-  margin-top: ",
-                                        [Function],
-                                        ";
-",
-                                      ],
-                                    },
-                                    "displayName": "styled.div",
-                                    "foldedComponentIds": Array [],
-                                    "render": [Function],
-                                    "styledComponentId": "sc-ifAKCX",
-                                    "target": "div",
-                                    "toString": [Function],
-                                    "warnTooManyClasses": [Function],
-                                    "withComponent": [Function],
-                                  }
-                                }
-                                forwardedRef={null}
-                              >
-                                <div
-                                  className="c3"
-                                >
-                                  <default
-                                    features={
-                                      Array [
-                                        Object {
-                                          "value": "React - Main library",
-                                        },
-                                        Object {
-                                          "value": "SSR - Server Side Rendering",
-                                        },
-                                        Object {
-                                          "value": "Typescript - Type checking",
-                                        },
-                                        Object {
-                                          "value": "Redux - Global store",
-                                        },
-                                        Object {
-                                          "value": "Redux-Saga - Global store manager",
-                                        },
-                                        Object {
-                                          "value": "i18n - Localisation",
-                                        },
-                                      ]
-                                    }
-                                  >
-                                    <MockComponent
-                                      features={
-                                        Array [
-                                          Object {
-                                            "value": "React - Main library",
-                                          },
-                                          Object {
-                                            "value": "SSR - Server Side Rendering",
-                                          },
-                                          Object {
-                                            "value": "Typescript - Type checking",
-                                          },
-                                          Object {
-                                            "value": "Redux - Global store",
-                                          },
-                                          Object {
-                                            "value": "Redux-Saga - Global store manager",
-                                          },
-                                          Object {
-                                            "value": "i18n - Localisation",
-                                          },
-                                        ]
-                                      }
-                                      originalComponent="Features"
-                                    />
-                                  </default>
-                                </div>
-                              </StyledComponent>
-                            </styled.div>
-                            <LoaderComponent
-                              error=""
-                              isInitialLoaded={true}
-                              isLoading={false}
-                              render={[Function]}
-                            >
-                              <styled.div>
-                                <StyledComponent
-                                  forwardedComponent={
-                                    Object {
-                                      "$$typeof": Symbol(react.forward_ref),
-                                      "attrs": Array [],
-                                      "componentStyle": ComponentStyle {
-                                        "componentId": "sc-EHOje",
-                                        "isStatic": false,
-                                        "lastClassName": "c4",
-                                        "rules": Array [
-                                          "
-  margin-top: ",
-                                          [Function],
-                                          ";
-",
-                                        ],
-                                      },
-                                      "displayName": "styled.div",
-                                      "foldedComponentIds": Array [],
-                                      "render": [Function],
-                                      "styledComponentId": "sc-EHOje",
-                                      "target": "div",
-                                      "toString": [Function],
-                                      "warnTooManyClasses": [Function],
-                                      "withComponent": [Function],
-                                    }
-                                  }
-                                  forwardedRef={null}
-                                >
-                                  <div
-                                    className="c4"
-                                  >
-                                    <default
-                                      releases={
-                                        Array [
-                                          Object {
-                                            "html_url": "https://github.com/nikitapavets/nkit/releases/tag/v1",
-                                            "id": 1,
-                                            "name": "Release v1",
-                                            "tag_name": "v1",
-                                          },
-                                        ]
-                                      }
-                                    >
-                                      <MockComponent
-                                        originalComponent="Releases"
-                                        releases={
-                                          Array [
-                                            Object {
-                                              "html_url": "https://github.com/nikitapavets/nkit/releases/tag/v1",
-                                              "id": 1,
-                                              "name": "Release v1",
-                                              "tag_name": "v1",
-                                            },
-                                          ]
-                                        }
-                                      />
-                                    </default>
-                                  </div>
-                                </StyledComponent>
-                              </styled.div>
-                            </LoaderComponent>
-                          </div>
-                        </StyledComponent>
+                          general:appTitle
+                        </div>
                       </styled.div>
+                      <styled.div>
+                        <div
+                          className="c3"
+                        >
+                          <default
+                            features={
+                              Array [
+                                Object {
+                                  "value": "React - Main library",
+                                },
+                                Object {
+                                  "value": "SSR - Server Side Rendering",
+                                },
+                                Object {
+                                  "value": "Typescript - Type checking",
+                                },
+                                Object {
+                                  "value": "Redux - Global store",
+                                },
+                                Object {
+                                  "value": "Redux-Saga - Global store manager",
+                                },
+                                Object {
+                                  "value": "i18n - Localisation",
+                                },
+                              ]
+                            }
+                          >
+                            <MockComponent
+                              features={
+                                Array [
+                                  Object {
+                                    "value": "React - Main library",
+                                  },
+                                  Object {
+                                    "value": "SSR - Server Side Rendering",
+                                  },
+                                  Object {
+                                    "value": "Typescript - Type checking",
+                                  },
+                                  Object {
+                                    "value": "Redux - Global store",
+                                  },
+                                  Object {
+                                    "value": "Redux-Saga - Global store manager",
+                                  },
+                                  Object {
+                                    "value": "i18n - Localisation",
+                                  },
+                                ]
+                              }
+                              originalComponent="Features"
+                            />
+                          </default>
+                        </div>
+                      </styled.div>
+                      <LoaderComponent
+                        error=""
+                        isInitialLoaded={true}
+                        isLoading={false}
+                        render={[Function]}
+                      >
+                        <styled.div>
+                          <div
+                            className="c4"
+                          >
+                            <default
+                              releases={
+                                Array [
+                                  Object {
+                                    "html_url": "https://github.com/nikitapavets/nkit/releases/tag/v1",
+                                    "id": 1,
+                                    "name": "Release v1",
+                                    "tag_name": "v1",
+                                  },
+                                ]
+                              }
+                            >
+                              <MockComponent
+                                originalComponent="Releases"
+                                releases={
+                                  Array [
+                                    Object {
+                                      "html_url": "https://github.com/nikitapavets/nkit/releases/tag/v1",
+                                      "id": 1,
+                                      "name": "Release v1",
+                                      "tag_name": "v1",
+                                    },
+                                  ]
+                                }
+                              />
+                            </default>
+                          </div>
+                        </styled.div>
+                      </LoaderComponent>
                     </div>
-                  </StyledComponent>
-                </styled.div>
-              </section>
-            </StyledComponent>
+                  </styled.div>
+                </div>
+              </styled.div>
+            </section>
           </styled.section>
         </HomeComponent>
       </HelmetProvider>
-    </ThemeProvider>
+    </Component>
   </Provider>
 </Component>
 `;

@@ -44,213 +44,51 @@ exports[`FeaturesComponent should not regret 1`] = `
   }
 >
   <styled.section>
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
-            "isStatic": false,
-            "lastClassName": "bDWFJH",
-            "rules": Array [],
-          },
-          "displayName": "styled.section",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
-          "target": "section",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <section
+      className=""
     >
-      <section
-        className=""
+      <styled.div>
+        <div
+          className="c0"
+        >
+          general:features
+        </div>
+      </styled.div>
+      <styled.input
+        onChange={[Function]}
+        value="re"
       >
-        <styled.div>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-bwzfXH",
-                  "isStatic": false,
-                  "lastClassName": "c0",
-                  "rules": Array [
-                    "
-  font-size: ",
-                    [Function],
-                    ";
-  font-weight: bold;
-",
-                  ],
-                },
-                "displayName": "styled.div",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-bwzfXH",
-                "target": "div",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-          >
-            <div
-              className="c0"
-            >
-              general:features
-            </div>
-          </StyledComponent>
-        </styled.div>
-        <styled.input
+        <input
+          className="c1"
           onChange={[Function]}
           value="re"
+        />
+      </styled.input>
+      <styled.div>
+        <div
+          className="c2"
         >
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-htpNat",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "
-  width: 100%;
-
-  margin-top: ",
-                    [Function],
-                    ";
-  padding: 5px;
-  border: 1px solid ",
-                    [Function],
-                    ";
-",
-                  ],
-                },
-                "displayName": "styled.input",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-htpNat",
-                "target": "input",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            onChange={[Function]}
-            value="re"
-          >
-            <input
-              className="c1"
-              onChange={[Function]}
-              value="re"
-            />
-          </StyledComponent>
-        </styled.input>
-        <styled.div>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-bxivhb",
-                  "isStatic": false,
-                  "lastClassName": "c2",
-                  "rules": Array [
-                    "
-  margin-top: ",
-                    [Function],
-                    ";
-  padding-left: 5px;
-",
-                  ],
-                },
-                "displayName": "styled.div",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-bxivhb",
-                "target": "div",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
+          <styled.div
+            isSelected={true}
+            key="React - Main library"
           >
             <div
-              className="c2"
+              className="c3"
             >
-              <styled.div
-                isSelected={true}
-                key="React - Main library"
+              <default
+                type="checkMark"
               >
-                <StyledComponent
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-ifAKCX",
-                        "isStatic": false,
-                        "lastClassName": "c3",
-                        "rules": Array [
-                          "
-  display: flex;
-  align-items: center;
-
-  svg {
-    margin-right: 10px;
-  }
-
-  ",
-                          [Function],
-                          "
-",
-                        ],
-                      },
-                      "displayName": "styled.div",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-ifAKCX",
-                      "target": "div",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  isSelected={true}
-                >
-                  <div
-                    className="c3"
-                  >
-                    <default
-                      type="checkMark"
-                    >
-                      <MockComponent
-                        originalComponent="Icon"
-                        type="checkMark"
-                      />
-                    </default>
-                    React - Main library
-                  </div>
-                </StyledComponent>
-              </styled.div>
+                <MockComponent
+                  originalComponent="Icon"
+                  type="checkMark"
+                />
+              </default>
+              React - Main library
             </div>
-          </StyledComponent>
-        </styled.div>
-      </section>
-    </StyledComponent>
+          </styled.div>
+        </div>
+      </styled.div>
+    </section>
   </styled.section>
 </FeaturesComponent>
 `;

@@ -37,196 +37,51 @@ exports[`ReleasesComponent should not regret 1`] = `
   }
 >
   <styled.section>
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
-            "isStatic": false,
-            "lastClassName": "bDWFJH",
-            "rules": Array [],
-          },
-          "displayName": "styled.section",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
-          "target": "section",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <section
+      className=""
     >
-      <section
-        className=""
-      >
-        <styled.div>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-bwzfXH",
-                  "isStatic": false,
-                  "lastClassName": "c0",
-                  "rules": Array [
-                    "
-  font-size: ",
-                    [Function],
-                    ";
-  font-weight: bold;
-",
-                  ],
-                },
-                "displayName": "styled.div",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-bwzfXH",
-                "target": "div",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
+      <styled.div>
+        <div
+          className="c0"
+        >
+          general:releases
+        </div>
+      </styled.div>
+      <styled.div>
+        <div
+          className="c1"
+        >
+          <styled.div
+            key="1"
           >
             <div
-              className="c0"
+              className="c2"
             >
-              general:releases
-            </div>
-          </StyledComponent>
-        </styled.div>
-        <styled.div>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-htpNat",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "
-  margin-top: ",
-                    [Function],
-                    ";
-  padding-left: 5px;
-",
-                  ],
-                },
-                "displayName": "styled.div",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-htpNat",
-                "target": "div",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-          >
-            <div
-              className="c1"
-            >
-              <styled.div
-                key="1"
+              <default
+                type="tag"
               >
-                <StyledComponent
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-bxivhb",
-                        "isStatic": false,
-                        "lastClassName": "c2",
-                        "rules": Array [
-                          "
-  display: flex;
-  align-items: center;
-
-  svg {
-    margin-right: 10px;
-  }
-",
-                        ],
-                      },
-                      "displayName": "styled.div",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-bxivhb",
-                      "target": "div",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
+                <MockComponent
+                  originalComponent="Icon"
+                  type="tag"
+                />
+              </default>
+              <styled.a
+                href="fake_url"
+                target="_blank"
+              >
+                <a
+                  className=""
+                  href="fake_url"
+                  target="_blank"
                 >
-                  <div
-                    className="c2"
-                  >
-                    <default
-                      type="tag"
-                    >
-                      <MockComponent
-                        originalComponent="Icon"
-                        type="tag"
-                      />
-                    </default>
-                    <styled.a
-                      href="fake_url"
-                      target="_blank"
-                    >
-                      <StyledComponent
-                        forwardedComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "attrs": Array [],
-                            "componentStyle": ComponentStyle {
-                              "componentId": "sc-ifAKCX",
-                              "isStatic": false,
-                              "lastClassName": "cFlEyZ",
-                              "rules": Array [],
-                            },
-                            "displayName": "styled.a",
-                            "foldedComponentIds": Array [],
-                            "render": [Function],
-                            "styledComponentId": "sc-ifAKCX",
-                            "target": "a",
-                            "toString": [Function],
-                            "warnTooManyClasses": [Function],
-                            "withComponent": [Function],
-                          }
-                        }
-                        forwardedRef={null}
-                        href="fake_url"
-                        target="_blank"
-                      >
-                        <a
-                          className=""
-                          href="fake_url"
-                          target="_blank"
-                        >
-                          fake_name (Fake name)
-                        </a>
-                      </StyledComponent>
-                    </styled.a>
-                  </div>
-                </StyledComponent>
-              </styled.div>
+                  fake_name (Fake name)
+                </a>
+              </styled.a>
             </div>
-          </StyledComponent>
-        </styled.div>
-      </section>
-    </StyledComponent>
+          </styled.div>
+        </div>
+      </styled.div>
+    </section>
   </styled.section>
 </ReleasesComponent>
 `;

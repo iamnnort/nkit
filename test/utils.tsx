@@ -52,6 +52,7 @@ export async function recordSaga(saga: Saga) {
   await runSaga(
     {
       dispatch: (action: Action) => dispatched.push(action),
+      getState: () => ({ git: { releases: { test: 1 } } }),
     },
     saga
   ).toPromise();
