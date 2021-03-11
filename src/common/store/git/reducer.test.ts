@@ -20,7 +20,7 @@ describe('git reducer', () => {
             id: 1,
             name: 'Release v1',
             tag_name: 'v1',
-            html_url: 'https://github.com/nikitapavets/nkit/releases/tag/v1',
+            html_url: 'https://github.com/iamnnort/nkit/releases/tag/v1',
           },
         ])
       )
@@ -33,7 +33,7 @@ describe('git reducer', () => {
           id: 1,
           name: 'Release v1',
           tag_name: 'v1',
-          html_url: 'https://github.com/nikitapavets/nkit/releases/tag/v1',
+          html_url: 'https://github.com/iamnnort/nkit/releases/tag/v1',
         },
       ],
     });

@@ -1,5 +1,5 @@
 {
-  "name": "@nikitapavets/nkit",
+  "name": "@iamnnort/nkit",
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
@@ -24,15 +24,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nikitapavets/nkit.git"
+    "url": "git+https://github.com/iamnnort/nkit.git"
   },
   "keywords": [],
   "author": "Nikita Pavets (nikitapavets@gmail.com)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nikitapavets/nkit/issues"
+    "url": "https://github.com/iamnnort/nkit/issues"
   },
-  "homepage": "https://github.com/nikitapavets/nkit#readme",
+  "homepage": "https://github.com/iamnnort/nkit#readme",
   "devDependencies": {
     "@babel/core": "^7.7.0",
     "@babel/preset-env": "^7.7.0",

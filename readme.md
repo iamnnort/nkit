@@ -12,7 +12,7 @@
 ## Installation
 
 ```bash
-git clone https://github.com/nikitapavets/nkit
+git clone https://github.com/iamnnort/nkit
 cd nkit
 cp .env.example .env
 yarn install
@@ -40,7 +40,7 @@ Please make sure to update tests as appropriate.
 
 ## Author
 
-[Nikita Pavets](https://github.com/nikitapavets)
+[Nikita Pavets](https://github.com/iamnnort)
 
 ## License
 

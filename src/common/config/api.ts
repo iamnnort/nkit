@@ -19,7 +19,7 @@ const config = {
     // API endpoints here
   },
 
-  gitUrl: 'https://api.github.com/repos/nikitapavets/nkit',
+  gitUrl: 'https://api.github.com/repos/iamnnort/nkit',
   gitEndPoints: {
     getReleases: () => '/releases',
   },

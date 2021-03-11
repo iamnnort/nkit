@@ -4,12 +4,12 @@ import { loadReleases } from '@common/store/git/sagas';
 
 describe('git sagas', () => {
   it(`should dispatch ${ActionTypes.LOAD_RELEASES_SUCCESS} if git releases fetching is succeed`, async () => {
-    global.apiMock.onGet('https://api.github.com/repos/nikitapavets/nkit/releases').replyOnce(200, [
+    global.apiMock.onGet('https://api.github.com/repos/iamnnort/nkit/releases').replyOnce(200, [
       {
         id: 1,
         name: 'Release v1',
         tag_name: 'v1',
-        html_url: 'https://github.com/nikitapavets/nkit/releases/tag/v1',
+        html_url: 'https://github.com/iamnnort/nkit/releases/tag/v1',
       },
     ]);
 
@@ -21,14 +21,14 @@ describe('git sagas', () => {
           id: 1,
           name: 'Release v1',
           tag_name: 'v1',
-          html_url: 'https://github.com/nikitapavets/nkit/releases/tag/v1',
+          html_url: 'https://github.com/iamnnort/nkit/releases/tag/v1',
         },
       ])
     );
   });
 
   it(`should dispatch ${ActionTypes.LOAD_RELEASES_FAILURE} if git releases fetching is failed`, async () => {
-    global.apiMock.onGet('https://api.github.com/repos/nikitapavets/nkit/releases').networkErrorOnce();
+    global.apiMock.onGet('https://api.github.com/repos/iamnnort/nkit/releases').networkErrorOnce();
 
     const dispatched = await global.recordSaga(loadReleases);
 
