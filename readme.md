@@ -16,36 +16,20 @@ git clone https://github.com/nikitapavets/nkit
 cd nkit
 cp .env.example .env
 yarn install
+yarn build
 ```
 
 ## Development
 
-Without Docker
-
 ```bash
-yarn deploy:dev
-```
-
-With Docker
-
-```bash
-docker-compose build
-docker-compose up -d
+yarn start
 ```
 
 ## Production
 
-Without Docker
-
 ```bash
-yarn deploy:prod
-```
-
-With Docker
-
-```bash
-docker build -f dockerfile.prod -t nkit .
-docker run -p 9010:3000 --name nkit -d nkit
+docker build -f dockerfile -t nkit . --no-cache
+docker run -p 9010:80 --name nkit -d nkit
 ```
 
 ## Contributing
