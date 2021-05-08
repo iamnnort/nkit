@@ -145,7 +145,7 @@
     "i18next-xhr-backend": "^3.0.0",
     "idempotent-babel-polyfill": "^7.0.0",
     "image-webpack-loader": "^4.6.0",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "moment": "^2.24.0",
     "normalizr": "^3.4.1",
     "qs": "^6.9.1",
